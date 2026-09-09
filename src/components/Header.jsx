@@ -8,7 +8,10 @@ function Logo({ compact = false }) {
   return <a href="#home" className="flex shrink-0 items-center" aria-label={`${site.name} home`}><img
     src={logo}
     alt={`${site.name} logo`}
-    className={`${compact ? "h-9" : "h-10 md:h-12"} w-auto object-contain transition-[height] duration-300`}
+    width="2158"
+    height="729"
+    decoding="async"
+    className={`${compact ? "w-[145px] md:w-[165px]" : "w-[150px] md:w-[190px]"} h-auto max-w-none object-contain transition-[width] duration-300`}
   /></a>;
 }
 function Header() {
