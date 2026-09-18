@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowRightIcon } from "lucide-react";
+import { site } from "../data/site";
 const EASE = [0.23, 1, 0.32, 1];
 const HERO_IMAGE = "/eb01b7dd-fdd5-48ad-93e2-a9d553ab3d5e.jpg";
 const headingLines = [
@@ -10,9 +11,9 @@ const headingLines = [
 ];
 const pillars = ["Compassionate Care", "Expert Doctors", "Advanced Facilities"];
 const floatingCards = [
-  { big: "24\xD77", small: "Emergency Care", position: "left-0 top-[16%]", delay: 0 },
-  { big: "Expert", small: "Medical Specialists", position: "right-2 top-[46%]", delay: 1.2 },
-  { big: "Advanced", small: "Healthcare", position: "left-6 bottom-[8%]", delay: 2.4 }
+  { big: "Patient-first", small: "Thoughtful Care", position: "left-0 top-[16%]", delay: 0 },
+  { big: "Focused", small: "Women's Health", position: "right-2 top-[46%]", delay: 1.2 },
+  { big: "Clear", small: "Clinical Guidance", position: "left-6 bottom-[8%]", delay: 2.4 }
 ];
 function Hero() {
   return <section id="home" className="relative w-full overflow-hidden bg-brand-cream"><div className="mx-auto grid max-w-[1400px] items-center gap-14 px-6 pb-20 pt-36 md:px-8 lg:grid-cols-[1.05fr_1fr] lg:gap-8 lg:pb-28 lg:pt-44">{
@@ -27,7 +28,7 @@ function Hero() {
             Meddleaff Healthcare
             <span className="mx-2 text-brand-fresh" aria-hidden="true">
               /
-            </span><span className="text-ink-muted">Multispeciality Hospital</span></motion.p><h1 className="mt-7 font-display text-[clamp(2.75rem,6.4vw,5.5rem)] font-light leading-[0.98] tracking-[-0.02em] text-brand-navy">{headingLines.map(
+            </span><span className="text-ink-muted">{site.kind}</span></motion.p><h1 className="mt-7 font-display text-[clamp(2.75rem,6.4vw,5.5rem)] font-light leading-[0.98] tracking-[-0.02em] text-brand-navy">{headingLines.map(
     (line, i) => <span key={i} className="block overflow-hidden"><motion.span
       className="block"
       initial={{ opacity: 0, y: 40 }}

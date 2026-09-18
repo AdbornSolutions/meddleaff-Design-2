@@ -10,18 +10,18 @@ const facilities = [
     image: "/7db208ff-0eb4-4cef-a07d-4f1ce9aac64f.jpg"
   },
   {
-    label: "Advanced Diagnostics",
-    caption: "Imaging suite",
+    label: "Clinical Support",
+    caption: "Care environment",
     image: "/1df8b57d-2e09-4d94-9387-5f2e50ee529e.jpg"
   },
   {
-    label: "Advanced Equipment",
-    caption: "Operating theatre",
+    label: "Prepared Care Spaces",
+    caption: "Clinical infrastructure",
     image: "/e9d4b42a-d4db-417b-a168-2db3195baed5.jpg"
   },
   {
-    label: "24\xD77 Emergency Support",
-    caption: "Emergency department",
+    label: "Patient Support",
+    caption: "Coordinated care area",
     image: "/3f76a529-568e-47ba-b38b-a0e8f557f0f5.jpg"
   }
 ];

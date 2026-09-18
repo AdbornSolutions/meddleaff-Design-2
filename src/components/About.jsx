@@ -1,6 +1,8 @@
 import { ArrowRightIcon, CheckIcon } from "lucide-react";
 import { Reveal, ImageReveal, SectionLabel } from "./Reveal";
 import { aboutFeatures } from "../data/site";
+import { company } from "../data/content";
+import { SiteLink } from "./SiteLink";
 const IMG_CONSULT = "/c69548f5-2001-4af7-8be6-86387ea9f2ef.jpg";
 const IMG_INTERIOR = "/65b82f2e-0b60-480c-9116-37df5f9fe003.jpg";
 const IMG_CARE = "/16aa1c22-ef26-409e-9c2b-d841f5ef0773.jpg";
@@ -31,9 +33,7 @@ function About() {
   }<div><Reveal><SectionLabel>Who We Are</SectionLabel></Reveal><Reveal delay={0.08}><h2 className="mt-6 font-display text-[clamp(2.25rem,4.2vw,3.75rem)] font-light leading-[1.04] tracking-[-0.02em] text-brand-navy">
               Healthcare Designed
               <br /><span className="text-brand-green">Around You.</span></h2></Reveal><Reveal delay={0.14}><p className="mt-7 max-w-xl text-[17px] leading-relaxed text-ink-soft">
-              At Meddleaff Healthcare, we believe that quality healthcare goes beyond treatment. Our
-              approach combines medical expertise, advanced technology and compassionate care to
-              support every patient throughout their healthcare journey.
+              {company.shortIntro}
             </p></Reveal><ul className="mt-10 grid gap-x-8 gap-y-4 sm:grid-cols-2">{aboutFeatures.map(
     (feature, i) => <Reveal
       as="li"
@@ -41,8 +41,8 @@ function About() {
       delay={0.2 + i * 0.06}
       className="flex items-start gap-3 text-[15px] text-brand-navy"
     ><span className="mt-0.5 grid h-5 w-5 shrink-0 place-items-center rounded-full bg-brand-mint text-brand-green"><CheckIcon className="h-3 w-3" strokeWidth={3} aria-hidden="true" /></span>{feature}</Reveal>
-  )}</ul><Reveal delay={0.45}><a
-    href="#specialities"
+  )}</ul><Reveal delay={0.45}><SiteLink
+    to="/about"
     className="group mt-12 inline-flex items-center gap-2 border-b border-brand-navy/20 pb-2 text-sm font-medium text-brand-navy transition-colors duration-200 ease-premium hover:border-brand-green hover:text-brand-green"
   >
               
@@ -50,7 +50,7 @@ function About() {
               <ArrowRightIcon
     className="h-4 w-4 transition-transform duration-200 ease-premium group-hover:translate-x-[5px]"
     aria-hidden="true"
-  /></a></Reveal></div></div></section>;
+  /></SiteLink></Reveal></div></div></section>;
 }
 export {
   About

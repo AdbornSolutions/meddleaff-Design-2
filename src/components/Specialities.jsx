@@ -31,9 +31,9 @@ function Specialities() {
     return () => window.removeEventListener("scroll", updateActiveSpeciality);
   }, []);
 
-  return <section ref={sectionRef} id="specialities" className="w-full bg-brand-mint py-24 lg:py-32"><div className="mx-auto max-w-[1400px] px-6 md:px-8"><div className="max-w-3xl"><Reveal><SectionLabel>Medical Specialities</SectionLabel></Reveal><Reveal delay={0.08}><h2 className="mt-6 font-display text-[clamp(2.25rem,4.6vw,4rem)] font-light leading-[1.04] tracking-[-0.02em] text-brand-navy">
-              Specialised Care.
-              <br /><span className="text-brand-green">One Trusted Hospital.</span></h2></Reveal></div>{
+  return <section ref={sectionRef} id="specialities" className="w-full bg-brand-mint py-24 lg:py-32"><div className="mx-auto max-w-[1400px] px-6 md:px-8"><div className="max-w-3xl"><Reveal><SectionLabel>Women's Health Services</SectionLabel></Reveal><Reveal delay={0.08}><h2 className="mt-6 font-display text-[clamp(2.25rem,4.6vw,4rem)] font-light leading-[1.04] tracking-[-0.02em] text-brand-navy">
+              Focused Care.
+              <br /><span className="text-brand-green">For Every Life Stage.</span></h2></Reveal></div>{
     /* Desktop: list + image panel */
   }<div className="mt-16 hidden gap-14 lg:grid lg:grid-cols-[1fr_0.95fr]"><ul className="border-t border-brand-navy/10">{specialities.map((item, i) => {
     const isActive = i === active;

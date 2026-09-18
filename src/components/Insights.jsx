@@ -1,6 +1,7 @@
 import { ArrowRightIcon } from "lucide-react";
 import { Reveal, SectionLabel } from "./Reveal";
 import { insights } from "../data/insights";
+import { SiteLink } from "./SiteLink";
 function Insights() {
   return <section id="insights" aria-labelledby="insights-heading" className="w-full bg-white py-24 lg:py-32"><div className="mx-auto max-w-[1400px] px-6 md:px-8"><div className="flex flex-wrap items-end justify-between gap-8"><div className="max-w-2xl"><Reveal><SectionLabel>Health Insights</SectionLabel></Reveal><Reveal delay={0.08}><h2
     id="insights-heading"
@@ -14,7 +15,7 @@ function Insights() {
       key={article.title}
       delay={i * 0.1}
       className="group flex h-full flex-col"
-    ><a href="#insights" className="flex h-full flex-col"><div className="aspect-[4/3] overflow-hidden rounded-[1.75rem] bg-brand-mint"><img
+    ><SiteLink to="/blogs" className="flex h-full flex-col"><div className="aspect-[4/3] overflow-hidden rounded-[1.75rem] bg-brand-mint"><img
       src={article.image}
       alt={article.title}
       loading="lazy"
@@ -26,7 +27,7 @@ function Insights() {
                   <ArrowRightIcon
       className="h-4 w-4 transition-transform duration-200 ease-premium group-hover:translate-x-[5px]"
       aria-hidden="true"
-    /></span></a></Reveal>
+    /></span></SiteLink></Reveal>
   )}</div></div></section>;
 }
 export {

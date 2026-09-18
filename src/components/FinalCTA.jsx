@@ -1,5 +1,6 @@
 import { ArrowRightIcon } from "lucide-react";
 import { Reveal } from "./Reveal";
+import { SiteLink } from "./SiteLink";
 function FinalCTA() {
   return <section
     id="contact"
@@ -19,22 +20,22 @@ function FinalCTA() {
             Deserves the Best Care.
           </h2></Reveal><Reveal delay={0.14}><p className="mx-auto mt-7 max-w-xl text-[17px] leading-relaxed text-white/70">
             Take the first step towards better health with Meddleaff Healthcare.
-          </p></Reveal><Reveal delay={0.2}><div className="mt-11 flex flex-wrap items-center justify-center gap-3"><a
-    href="tel:021390322"
+          </p></Reveal><Reveal delay={0.2}><div className="mt-11 flex flex-wrap items-center justify-center gap-3"><SiteLink
+    to="/contact"
     className="inline-flex items-center rounded-full bg-white px-8 py-4 text-sm font-medium text-brand-navy transition-colors duration-200 ease-premium hover:bg-brand-cream"
   >
               
               Book an Appointment
-            </a><a
-    href="tel:9860232384"
+            </SiteLink><SiteLink
+    to="/patient-corner/queries"
     className="group inline-flex items-center gap-2 rounded-full border border-white/25 px-8 py-4 text-sm font-medium text-white transition-colors duration-200 ease-premium hover:border-white/60"
   >
               
-              Contact Us
+              Share a Query
               <ArrowRightIcon
     className="h-4 w-4 transition-transform duration-200 ease-premium group-hover:translate-x-[5px]"
     aria-hidden="true"
-  /></a></div></Reveal></div></section>;
+  /></SiteLink></div></Reveal></div></section>;
 }
 export {
   FinalCTA

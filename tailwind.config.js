@@ -6,23 +6,25 @@ export default {content: [
     extend: {
       colors: {
         brand: {
-          green: '#0B5D4C',
-          'green-dark': '#084237',
-          fresh: '#78A36A',
-          navy: '#172B4D',
-          cream: '#F7F6F1',
-          mint: '#EEF5EF',
-          gold: '#C9A66B',
+          green: '#0F5D5D',
+          'green-dark': '#0A4545',
+          fresh: '#5F8F45',
+          navy: '#16233C',
+          cream: '#F7F4EC',
+          mint: '#EDF3E9',
+          gold: '#B9822E',
+          amber: '#B9822E',
         },
         ink: {
-          DEFAULT: '#172B4D',
+        DEFAULT: '#16233C',
           soft: '#4A5568',
           muted: '#6B7280',
         },
       },
       fontFamily: {
-        display: ['Newsreader', 'Georgia', 'serif'],
+        display: ['Fraunces', 'Georgia', 'serif'],
         sans: ['Inter', 'system-ui', 'sans-serif'],
+        mono: ['JetBrains Mono', 'monospace'],
       },
       letterSpacing: {
         label: '0.18em',

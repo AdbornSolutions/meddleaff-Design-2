@@ -1,5 +1,5 @@
 /* @import url() FONT IMPORTS MUST ALWAYS BE AT THE VERY TOP OF THIS FILE, ABOVE THE TAILWIND IMPORTS — DO NOT DELETE THIS COMMENT */
-@import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,400;0,500;0,600;1,6..72,300;1,400&family=Inter:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap');
 
 /* CRITICAL: THE FOLLOWING TAILWIND IMPORTS MUST NEVER BE DELETED OR REORDERED — DO NOT DELETE THIS COMMENT */
 @import 'tailwindcss/base';
@@ -13,8 +13,8 @@ html {
   scroll-padding-top: 7rem;
 }
 body {
-  background-color: #f7f6f1;
-  color: #172b4d;
+  background-color: #f7f4ec;
+  color: #16233c;
   font-family: 'Inter', system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
 }
@@ -29,7 +29,7 @@ body {
   scrollbar-width: none;
 }
 *:focus-visible {
-  outline: 2px solid #0b5d4c;
+  outline: 2px solid #0f5d5d;
   outline-offset: 3px;
 }
 a,
@@ -39,6 +39,14 @@ button {
 section[id] {
   scroll-margin-top: 7rem;
 }
+.vitals-path {
+  stroke-dasharray: 1200;
+  stroke-dashoffset: 1200;
+  animation: draw-vitals 2.4s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+}
+@keyframes draw-vitals {
+  to { stroke-dashoffset: 0; }
+}
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
@@ -46,5 +54,9 @@ section[id] {
   .animate-float,
   .animate-float-slow {
     animation: none !important;
+  }
+  .vitals-path {
+    animation: none;
+    stroke-dashoffset: 0;
   }
 }

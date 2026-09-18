@@ -22,17 +22,17 @@ function Facilities() {
     delay={0.1}
   />{scrim}<OverlayLabel label={consult.label} caption={consult.caption} /></div><div className="relative overflow-hidden rounded-[2rem] bg-brand-mint"><ImageReveal
     src={diagnostics.image}
-    alt="A modern diagnostic imaging scanner in a softly lit room"
+    alt="A modern clinical support space"
     className="h-full min-h-[260px] w-full"
     delay={0.18}
   />{scrim}<OverlayLabel label={diagnostics.label} caption={diagnostics.caption} /></div><div className="relative overflow-hidden rounded-[2rem] bg-brand-mint"><ImageReveal
     src={equipment.image}
-    alt="Operating theatre lights and monitors in a sterile theatre"
+    alt="A prepared clinical care environment"
     className="h-full min-h-[260px] w-full"
     delay={0.26}
   />{scrim}<OverlayLabel label={equipment.label} caption={equipment.caption} /></div><div className="relative overflow-hidden rounded-[2rem] bg-brand-mint"><ImageReveal
     src={emergency.image}
-    alt="A prepared emergency department bay with monitors and trolleys"
+    alt="A coordinated patient support area"
     className="h-full min-h-[260px] w-full"
     delay={0.34}
   />{scrim}<OverlayLabel label={emergency.label} caption={emergency.caption} /></div></div></div></section>;
