@@ -23,6 +23,8 @@ import {
   HospitalAffiliationPage,
   NotFoundPage,
   PatientCornerPage,
+  PatientGuidePage,
+  SpecialityPage,
   TreatmentsPage
 } from "./pages/SitePages";
 function HomePage() {
@@ -41,7 +43,8 @@ function App() {
       "/blogs": "Health Insights | Meddleaff Healthcare",
       "/contact": "Contact Us | Meddleaff Healthcare"
     };
-    document.title = titles[pathname] || (pathname.startsWith("/patient-corner") ? "Patient's Corner | Meddleaff Healthcare" : "Page Not Found | Meddleaff Healthcare");
+    const sectionTitle = pathname.startsWith("/specialities/") ? "Speciality | Meddleaff Healthcare" : pathname.startsWith("/patient-guide/") ? "Patient Guide | Meddleaff Healthcare" : pathname.startsWith("/patient-corner") ? "Patient's Corner | Meddleaff Healthcare" : "Page Not Found | Meddleaff Healthcare";
+    document.title = titles[pathname] || sectionTitle;
   }, [pathname]);
   let page;
   if (pathname === "/") page = <HomePage />;
@@ -52,6 +55,8 @@ function App() {
   else if (pathname === "/gallery") page = <GalleryPage />;
   else if (pathname === "/blogs") page = <BlogsPage />;
   else if (pathname === "/contact") page = <ContactPage />;
+  else if (pathname.startsWith("/specialities/")) page = <SpecialityPage pathname={pathname} />;
+  else if (pathname.startsWith("/patient-guide/")) page = <PatientGuidePage pathname={pathname} />;
   else if (pathname === "/patient-corner" || pathname.startsWith("/patient-corner/")) page = <PatientCornerPage pathname={pathname} />;
   else page = <NotFoundPage />;
   return <div className="min-h-screen w-full bg-brand-cream"><Header pathname={pathname} />{page}<Footer /></div>;

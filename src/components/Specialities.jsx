@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ArrowRightIcon, ChevronDownIcon } from "lucide-react";
 import { Reveal, SectionLabel } from "./Reveal";
 import { specialities } from "../data/specialities";
+import { SiteLink } from "./SiteLink";
 const EASE = [0.23, 1, 0.32, 1];
 function Specialities() {
   const [active, setActive] = useState(0);
@@ -72,8 +73,8 @@ function Specialities() {
     animate={{ opacity: 1, x: 0 }}
     exit={{ opacity: 0, x: -16 }}
     transition={{ duration: 0.45, ease: EASE }}
-  ><p className="font-display text-5xl font-light leading-none text-white/45">{current.number}</p><p className="mt-4 text-[11px] uppercase tracking-label text-brand-fresh">{current.subtitle}</p><p className="mt-3 max-w-md text-[15px] leading-relaxed text-white/85">{current.description}</p><a
-    href="#contact"
+  ><p className="font-display text-5xl font-light leading-none text-white/45">{current.number}</p><p className="mt-4 text-[11px] uppercase tracking-label text-brand-fresh">{current.subtitle}</p><p className="mt-3 max-w-md text-[15px] leading-relaxed text-white/85">{current.description}</p><SiteLink
+    to={`/specialities/${current.slug}`}
     className="group mt-6 inline-flex items-center gap-2 text-sm font-medium text-white"
   >
                         
@@ -81,7 +82,7 @@ function Specialities() {
                         <ArrowRightIcon
     className="h-4 w-4 transition-transform duration-200 ease-premium group-hover:translate-x-[5px]"
     aria-hidden="true"
-  /></a></motion.div></AnimatePresence></div></div></div></div></div>{
+  /></SiteLink></motion.div></AnimatePresence></div></div></div></div></div>{
     /* Mobile / tablet: accordion */
   }<ul className="mt-12 border-t border-brand-navy/10 lg:hidden">{specialities.map((item, i) => {
     const isOpen = i === openMobile;
@@ -106,8 +107,8 @@ function Specialities() {
       alt={item.title}
       loading="lazy"
       className="h-full w-full object-cover"
-    /></div><p className="mt-4 text-[11px] uppercase tracking-label text-brand-green">{item.subtitle}</p><p className="mt-2 text-[15px] leading-relaxed text-ink-soft">{item.description}</p><a
-      href="#contact"
+    /></div><p className="mt-4 text-[11px] uppercase tracking-label text-brand-green">{item.subtitle}</p><p className="mt-2 text-[15px] leading-relaxed text-ink-soft">{item.description}</p><SiteLink
+      to={`/specialities/${item.slug}`}
       className="group mt-4 inline-flex items-center gap-2 text-sm font-medium text-brand-green"
     >
                         
@@ -115,7 +116,7 @@ function Specialities() {
                           <ArrowRightIcon
       className="h-4 w-4 transition-transform duration-200 ease-premium group-hover:translate-x-[5px]"
       aria-hidden="true"
-    /></a></div></motion.div>}</AnimatePresence></li>;
+    /></SiteLink></div></motion.div>}</AnimatePresence></li>;
   })}</ul></div></section>;
 }
 export {

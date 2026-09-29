@@ -9,7 +9,7 @@ const headingLines = [
   <>
     Beyond <span className="text-brand-green">Treatment.</span></>
 ];
-const pillars = ["Compassionate Care", "Expert Doctors", "Advanced Facilities"];
+const pillars = ["Compassionate Care", "Focused Expertise", "Clear Guidance"];
 const floatingCards = [
   { big: "Patient-first", small: "Thoughtful Care", position: "left-0 top-[16%]", delay: 0 },
   { big: "Focused", small: "Women's Health", position: "right-2 top-[46%]", delay: 1.2 },
@@ -42,8 +42,8 @@ function Hero() {
     className="mt-8 max-w-xl text-[17px] leading-relaxed text-ink-soft"
   >
             
-            Compassionate healthcare, experienced specialists and advanced medical facilities — all
-            focused on helping you and your family live healthier lives.
+            Compassionate women's healthcare, focused clinical expertise and clear guidance — all
+            designed around your wellbeing.
           </motion.p><motion.div
     initial={{ opacity: 0, y: 24 }}
     animate={{ opacity: 1, y: 0 }}

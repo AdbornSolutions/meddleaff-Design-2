@@ -71,6 +71,10 @@ function TreatmentProcessSection() {
   </div></section>;
 }
 
+function WomenHealthContinuumSection({ stages }) {
+  return <section className="bg-brand-navy py-24 text-white lg:py-32"><div className="mx-auto max-w-[1400px] px-6 md:px-8"><div className="grid gap-14 lg:grid-cols-[.8fr_1.2fr]"><SectionHeading tone="light" eyebrow="Care Through Life Stages" title="Women's health needs change. The care conversation should change with them." copy="From the first menstrual cycles to pregnancy planning and menopause, each consultation begins with the patient's current concern, history and priorities." /><div className="grid gap-px overflow-hidden rounded-[2rem] bg-white/10 sm:grid-cols-2">{stages.map(([title, copy], index) => <Reveal key={title} delay={index * .07}><article className="h-full bg-brand-navy p-7 md:p-8"><span className="font-mono text-[10px] tracking-label text-brand-gold">0{index + 1}</span><h3 className="mt-8 font-display text-2xl font-medium">{title}</h3><p className="mt-3 text-sm leading-relaxed text-white/65">{copy}</p></article></Reveal>)}</div></div></div></section>;
+}
+
 function TreatmentPreparationSection() {
   const checklist = ["A brief timeline of symptoms or concerns", "Previous reports, scans and prescriptions", "Current medicines and known allergies", "Questions you want answered during the consultation"];
   return <section className="bg-brand-navy py-24 text-white"><div className="mx-auto grid max-w-[1400px] gap-14 px-6 md:px-8 lg:grid-cols-[1fr_.9fr] lg:items-center"><SectionHeading tone="light" eyebrow="Prepare for Your Visit" title="A little preparation can make the consultation more useful." copy="You do not need to diagnose yourself. Bring the information that helps your clinician understand the full picture." /><Reveal><div className="rounded-[2rem] bg-white p-7 text-brand-navy md:p-9"><p className="font-mono text-[10px] uppercase tracking-label text-brand-green">Helpful checklist</p><ul className="mt-6 space-y-4">{checklist.map((item) => <li key={item} className="flex gap-3 text-sm leading-relaxed text-ink-soft"><CheckCircle2Icon className="mt-0.5 h-5 w-5 shrink-0 text-brand-fresh" />{item}</li>)}</ul></div></Reveal></div></section>;
@@ -136,5 +140,6 @@ export {
   ReadingPathSection,
   TreatmentPreparationSection,
   TreatmentProcessSection,
+  WomenHealthContinuumSection,
   VisitChecklistSection
 };

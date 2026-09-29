@@ -6,18 +6,17 @@ const site = {
   phones: [],
   nav: [
     { label: "Home", href: "/" },
-    { label: "Doctor's Profile", href: "/doctor-profile" },
-    { label: "Treatments", href: "/treatments" },
+    { label: "Specialities", href: "/treatments", menu: "specialities" },
+    { label: "Our Doctor", href: "/doctor-profile" },
+    { label: "Patient Guide", href: "/patient-guide/prepare-for-your-visit", menu: "patientGuide" },
     { label: "Affiliations", href: "/hospital-affiliation" },
-    { label: "Gallery", href: "/gallery" },
-    { label: "Blogs", href: "/blogs" },
-    { label: "Contact", href: "/contact" },
-    { label: "Patient's Corner", href: "/patient-corner" }
+    { label: "Media", href: "/gallery", children: [{ label: "Gallery", href: "/gallery" }, { label: "Health Insights", href: "/blogs" }] },
+    { label: "Contact", href: "/contact" }
   ]
 };
 const trustPoints = [
   { title: "Compassionate Care", copy: "Patient-first approach" },
-  { title: "Expert Doctors", copy: "Dedicated specialists" },
+  { title: "Focused Expertise", copy: "Dedicated specialist care" },
   { title: "Advanced Facilities", copy: "Modern healthcare technology" },
   { title: "Clear Guidance", copy: "Care explained with transparency" }
 ];
@@ -57,7 +56,7 @@ const journeySteps = [
   },
   {
     step: "Step 02",
-    title: "Meet Our Specialists",
+    title: "Meet Your Consultant",
     copy: "An unhurried consultation where your history and concerns are heard."
   },
   {

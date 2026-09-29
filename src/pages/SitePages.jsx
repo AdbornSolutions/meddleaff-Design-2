@@ -32,11 +32,14 @@ import {
   ReadingPathSection,
   TreatmentPreparationSection,
   TreatmentProcessSection,
+  WomenHealthContinuumSection,
   VisitChecklistSection
 } from "../components/PageSections";
 import { Reveal } from "../components/Reveal";
 import { SiteLink } from "../components/SiteLink";
-import { affiliations, blogPosts, company, doctor, faqs, gallery, treatments } from "../data/content";
+import { affiliations, blogPosts, careStages, company, doctor, faqs, gallery, treatments } from "../data/content";
+import { patientGuides } from "../data/patientGuide";
+import { specialities } from "../data/specialities";
 
 const iconSet = [HeartHandshakeIcon, SparklesIcon, AwardIcon, ShieldCheckIcon, TargetIcon, StethoscopeIcon, UsersIcon, Building2Icon, CheckIcon];
 
@@ -86,11 +89,40 @@ function TreatmentsPage() {
   const [active, setActive] = useState(null);
   const filtered = category === "All" ? treatments : treatments.filter((item) => item.category === category);
   return <><PageHero eyebrow="Treatments" title="Women's healthcare for every stage of life." lead="Explore care categories across obstetrics, gynaecology and reproductive health. Each care plan begins with an individual clinical consultation." />
+    <WomenHealthContinuumSection stages={careStages} />
     <TreatmentProcessSection />
     <section className="bg-white py-24 lg:py-32"><div className="mx-auto max-w-[1400px] px-6 md:px-8">
       <div className="flex flex-wrap gap-2" role="group" aria-label="Filter treatments">{categories.map((item) => <button key={item} type="button" onClick={() => setCategory(item)} className={`rounded-full px-5 py-3 text-sm transition ${category === item ? "bg-brand-green text-white" : "bg-brand-cream text-ink-soft hover:text-brand-green"}`}>{item}</button>)}</div>
-      <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">{filtered.map((item, index) => <Reveal key={item.id} delay={(index % 3) * .05}><article className="flex h-full flex-col rounded-[1.75rem] border border-brand-navy/8 bg-brand-cream p-7"><span className="font-mono text-[10px] uppercase tracking-label text-brand-green">{item.category}</span><h2 className="mt-5 font-display text-2xl font-medium text-brand-navy">{item.title}</h2><p className="mt-4 text-sm leading-relaxed text-ink-soft">{item.description}</p><button type="button" onClick={() => setActive(active === item.id ? null : item.id)} className="mt-auto inline-flex items-center gap-2 pt-7 text-left text-sm font-semibold text-brand-green">{active === item.id ? "Close details" : "Learn more"}<ChevronDownIcon className={`h-4 w-4 transition-transform ${active === item.id ? "rotate-180" : ""}`} /></button><AnimatePresence>{active === item.id && <motion.div initial={{ height: 0, opacity: 0 }} animate={{ height: "auto", opacity: 1 }} exit={{ height: 0, opacity: 0 }} className="overflow-hidden"><p className="mt-5 border-t border-brand-navy/10 pt-5 text-sm leading-relaxed text-ink-soft">A consultation is required to understand symptoms, review medical history and determine an appropriate care plan. Treatment availability is confirmed individually.</p></motion.div>}</AnimatePresence></article></Reveal>)}</div>
+      <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">{filtered.map((item, index) => <Reveal key={item.id} delay={(index % 3) * .05}><article className="flex h-full flex-col rounded-[1.75rem] border border-brand-navy/8 bg-brand-cream p-7"><span className="font-mono text-[10px] uppercase tracking-label text-brand-green">{item.category}</span><h2 className="mt-5 font-display text-2xl font-medium text-brand-navy">{item.title}</h2><p className="mt-4 text-sm leading-relaxed text-ink-soft">{item.description}</p><button type="button" onClick={() => setActive(active === item.id ? null : item.id)} aria-expanded={active === item.id} aria-controls={`${item.id}-details`} className="mt-auto inline-flex items-center gap-2 pt-7 text-left text-sm font-semibold text-brand-green">{active === item.id ? "Close details" : "What's covered"}<ChevronDownIcon className={`h-4 w-4 transition-transform ${active === item.id ? "rotate-180" : ""}`} /></button><AnimatePresence>{active === item.id && <motion.div id={`${item.id}-details`} initial={{ height: 0, opacity: 0 }} animate={{ height: "auto", opacity: 1 }} exit={{ height: 0, opacity: 0 }} className="overflow-hidden"><ul className="mt-5 space-y-3 border-t border-brand-navy/10 pt-5">{item.details.map((detail) => <li key={detail} className="flex gap-3 text-sm leading-relaxed text-ink-soft"><CheckIcon className="mt-0.5 h-4 w-4 shrink-0 text-brand-green" />{detail}</li>)}</ul><p className="mt-5 text-xs leading-relaxed text-ink-muted">Recommendations and availability are confirmed after individual clinical assessment.</p></motion.div>}</AnimatePresence></article></Reveal>)}</div>
     </div></section><TreatmentPreparationSection /><ConsultationBand /></>;
+}
+
+function SpecialityPage({ pathname }) {
+  const slug = pathname.split("/").filter(Boolean).pop();
+  const speciality = specialities.find((item) => item.slug === slug);
+  if (!speciality) return <NotFoundPage />;
+  const related = specialities.filter((item) => item.slug !== speciality.slug).slice(0, 3);
+  return <>
+    <PageHero eyebrow="Women's Health Speciality" title={speciality.title} lead={speciality.description} image={speciality.image} imageAlt={`${speciality.title} consultation`}>
+      <p className="font-mono text-xs uppercase tracking-label text-brand-green">{speciality.subtitle}</p>
+    </PageHero>
+    <section className="bg-white py-24 lg:py-32"><div className="mx-auto grid max-w-[1400px] gap-14 px-6 md:px-8 lg:grid-cols-[.8fr_1.2fr] lg:gap-24"><SectionHeading eyebrow="Care Overview" title="Focused guidance, shaped around the individual." copy={speciality.overview} /><Reveal delay={.1}><div className="rounded-[2rem] bg-brand-mint p-8 md:p-10"><p className="font-mono text-[10px] uppercase tracking-label text-brand-green">When a consultation may help</p><ul className="mt-7 space-y-4">{speciality.concerns.map((item) => <li key={item} className="flex gap-3 text-sm leading-relaxed text-ink-soft"><CheckIcon className="mt-0.5 h-5 w-5 shrink-0 text-brand-green" />{item}</li>)}</ul></div></Reveal></div></section>
+    <section className="bg-brand-navy py-24 text-white lg:py-32"><div className="mx-auto max-w-[1400px] px-6 md:px-8"><SectionHeading tone="light" eyebrow="Your Consultation" title="What the care conversation can include." copy="The exact assessment and next step depend on symptoms, medical history and clinical findings." /><div className="mt-14 grid gap-px overflow-hidden rounded-[2rem] bg-white/10 md:grid-cols-3">{speciality.care.map((item, index) => <Reveal key={item} delay={index * .08}><article className="h-full bg-brand-navy p-8"><span className="font-mono text-xs text-brand-gold">0{index + 1}</span><p className="mt-10 font-display text-xl font-medium leading-snug">{item}</p></article></Reveal>)}</div></div></section>
+    <section className="bg-brand-cream py-24"><div className="mx-auto max-w-[1400px] px-6 md:px-8"><SectionHeading eyebrow="Explore More" title="Related women's health specialities." /><div className="mt-12 grid gap-5 md:grid-cols-3">{related.map((item) => <SiteLink key={item.slug} to={`/specialities/${item.slug}`} className="group rounded-[1.75rem] bg-white p-7 transition hover:-translate-y-1 hover:shadow-[0_18px_55px_-35px_rgba(22,35,60,.4)]"><span className="font-mono text-[10px] text-brand-green">{item.number}</span><h2 className="mt-7 font-display text-2xl font-medium text-brand-navy">{item.title}</h2><p className="mt-3 text-sm leading-relaxed text-ink-soft">{item.description}</p><span className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-brand-green">View speciality <ArrowRightIcon className="h-4 w-4 transition-transform group-hover:translate-x-1" /></span></SiteLink>)}</div></div></section>
+    <ConsultationBand title={`Discuss ${speciality.title}`} copy="Request a consultation to review your concern, history and the most appropriate next step." />
+  </>;
+}
+
+function PatientGuidePage({ pathname }) {
+  const slug = pathname.split("/").filter(Boolean).pop();
+  const guide = patientGuides.find((item) => item.slug === slug);
+  if (!guide) return <NotFoundPage />;
+  return <>
+    <PageHero eyebrow="Patient Guide" title={guide.title} lead={guide.summary} />
+    <section className="bg-white py-24 lg:py-32"><div className="mx-auto max-w-[1400px] px-6 md:px-8"><SectionHeading eyebrow="Practical Guidance" title="Clear steps for a safer, smoother care experience." copy="Hospital-specific timings, admission rules and clinical instructions may vary. Always follow the directions confirmed for your appointment or admission." /><div className="mt-14 grid gap-5 lg:grid-cols-3">{guide.sections.map(([title, items], index) => <Reveal key={title} delay={index * .08}><article className="h-full rounded-[1.75rem] border border-brand-navy/8 bg-brand-cream p-7"><span className="grid h-11 w-11 place-items-center rounded-xl bg-brand-green font-mono text-xs text-white">0{index + 1}</span><h2 className="mt-8 font-display text-2xl font-medium text-brand-navy">{title}</h2><ul className="mt-6 space-y-4">{items.map((item) => <li key={item} className="flex gap-3 text-sm leading-relaxed text-ink-soft"><CheckIcon className="mt-0.5 h-4 w-4 shrink-0 text-brand-green" />{item}</li>)}</ul></article></Reveal>)}</div></div></section>
+    <section className="bg-brand-navy py-20 text-white"><div className="mx-auto grid max-w-[1100px] gap-8 px-6 md:px-8 lg:grid-cols-[auto_1fr] lg:items-center"><span className="grid h-16 w-16 place-items-center rounded-2xl bg-white/10 text-brand-gold"><ShieldCheckIcon className="h-7 w-7" /></span><div><p className="font-mono text-[10px] uppercase tracking-label text-brand-gold">Important</p><h2 className="mt-3 font-display text-3xl font-medium">Personal clinical instructions come first.</h2><p className="mt-4 text-sm leading-relaxed text-white/65">This guide supports preparation and does not replace instructions from your doctor or hospital. For urgent or severe symptoms, contact local emergency services.</p></div></div></section>
+    <ConsultationBand title="Need help planning your visit?" copy="Send an appointment request and the care team will confirm the appropriate next step." />
+  </>;
 }
 
 function GalleryPage() {
@@ -216,4 +248,4 @@ function NotFoundPage() {
   return <><PageHero eyebrow="404" title="This page could not be found." lead="The link may have moved, or the page may still be in preparation."><SiteLink to="/" className="inline-flex items-center gap-2 rounded-full bg-brand-green px-7 py-4 text-sm font-semibold text-white">Return Home <ArrowRightIcon className="h-4 w-4" /></SiteLink></PageHero></>;
 }
 
-export { AboutPage, BlogsPage, ContactPage, DoctorProfilePage, GalleryPage, HospitalAffiliationPage, NotFoundPage, PatientCornerPage, TreatmentsPage };
+export { AboutPage, BlogsPage, ContactPage, DoctorProfilePage, GalleryPage, HospitalAffiliationPage, NotFoundPage, PatientCornerPage, PatientGuidePage, SpecialityPage, TreatmentsPage };
