@@ -6,14 +6,12 @@ export default {content: [
     extend: {
       colors: {
         brand: {
-          green: '#0F5D5D',
-          'green-dark': '#0A4545',
-          fresh: '#5F8F45',
+          blue: '#1D4ED8',
+          'blue-dark': '#1E40AF',
+          sky: '#2563EB',
           navy: '#16233C',
-          cream: '#F7F4EC',
-          mint: '#EDF3E9',
-          gold: '#B9822E',
-          amber: '#B9822E',
+          white: '#FFFFFF',
+          ice: '#93C5FD',
         },
         ink: {
         DEFAULT: '#16233C',

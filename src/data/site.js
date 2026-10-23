@@ -4,9 +4,11 @@ const site = {
   tagline: "Compassionate Care. Advanced Healthcare. Better Lives.",
   kind: "Patient-centred healthcare",
   phones: [],
+  address: "Prayag Paradise, Friend’s Colony, Nagpur 440013",
+  operatingHours: "24×7",
   nav: [
     { label: "Home", href: "/" },
-    { label: "Specialities", href: "/treatments", menu: "specialities" },
+    { label: "Specialities", href: "/specialities", menu: "specialities" },
     { label: "Our Doctor", href: "/doctor-profile" },
     { label: "Patient Guide", href: "/patient-guide/prepare-for-your-visit", menu: "patientGuide" },
     { label: "Affiliations", href: "/hospital-affiliation" },

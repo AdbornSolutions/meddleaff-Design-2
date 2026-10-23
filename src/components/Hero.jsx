@@ -7,26 +7,26 @@ const headingLines = [
   <>Healthcare</>,
   <>That Cares</>,
   <>
-    Beyond <span className="text-brand-green">Treatment.</span></>
+    Beyond <span className="text-brand-blue">Treatment.</span></>
 ];
-const pillars = ["Compassionate Care", "Focused Expertise", "Clear Guidance"];
+const pillars = ["9 Medical Departments", "Open 24×7", "Nagpur"];
 const floatingCards = [
   { big: "Patient-first", small: "Thoughtful Care", position: "left-0 top-[16%]", delay: 0 },
-  { big: "Focused", small: "Women's Health", position: "right-2 top-[46%]", delay: 1.2 },
+  { big: "9", small: "Medical Departments", position: "right-2 top-[46%]", delay: 1.2 },
   { big: "Clear", small: "Clinical Guidance", position: "left-6 bottom-[8%]", delay: 2.4 }
 ];
 function Hero() {
-  return <section id="home" className="relative w-full overflow-hidden bg-brand-cream"><div className="mx-auto grid max-w-[1400px] items-center gap-14 px-6 pb-20 pt-36 md:px-8 lg:grid-cols-[1.05fr_1fr] lg:gap-8 lg:pb-28 lg:pt-44">{
+  return <section id="home" className="relative w-full overflow-hidden bg-brand-white"><div className="mx-auto grid max-w-[1400px] items-center gap-14 px-6 pb-20 pt-36 md:px-8 lg:grid-cols-[1.05fr_1fr] lg:gap-8 lg:pb-28 lg:pt-44">{
     /* Left */
   }<div className="relative z-10"><motion.p
     initial={{ opacity: 0, y: 16 }}
     animate={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.7, ease: EASE, delay: 0.25 }}
-    className="text-[11px] font-medium uppercase leading-relaxed tracking-label text-brand-green"
+    className="text-[11px] font-medium uppercase leading-relaxed tracking-label text-brand-blue"
   >
             
             Meddleaff Healthcare
-            <span className="mx-2 text-brand-fresh" aria-hidden="true">
+            <span className="mx-2 text-brand-sky" aria-hidden="true">
               /
             </span><span className="text-ink-muted">{site.kind}</span></motion.p><h1 className="mt-7 font-display text-[clamp(2.75rem,6.4vw,5.5rem)] font-light leading-[0.98] tracking-[-0.02em] text-brand-navy">{headingLines.map(
     (line, i) => <span key={i} className="block overflow-hidden"><motion.span
@@ -42,8 +42,8 @@ function Hero() {
     className="mt-8 max-w-xl text-[17px] leading-relaxed text-ink-soft"
   >
             
-            Compassionate women's healthcare, focused clinical expertise and clear guidance — all
-            designed around your wellbeing.
+            Care for women, children and families across nine departments in Nagpur — all
+            with care designed around your wellbeing.
           </motion.p><motion.div
     initial={{ opacity: 0, y: 24 }}
     animate={{ opacity: 1, y: 0 }}
@@ -51,13 +51,13 @@ function Hero() {
     className="mt-10 flex flex-wrap items-center gap-3"
   ><a
     href="#contact"
-    className="inline-flex items-center rounded-full bg-brand-green px-8 py-4 text-sm font-medium text-white transition-colors duration-200 ease-premium hover:bg-brand-green-dark"
+    className="inline-flex items-center rounded-full bg-brand-blue px-8 py-4 text-sm font-medium text-white transition-colors duration-200 ease-premium hover:bg-brand-blue-dark"
   >
               
               Book an Appointment
             </a><a
     href="#specialities"
-    className="group inline-flex items-center gap-2 rounded-full border border-brand-navy/15 px-8 py-4 text-sm font-medium text-brand-navy transition-colors duration-200 ease-premium hover:border-brand-green hover:text-brand-green"
+    className="group inline-flex items-center gap-2 rounded-full border border-brand-navy/15 px-8 py-4 text-sm font-medium text-brand-navy transition-colors duration-200 ease-premium hover:border-brand-blue hover:text-brand-blue"
   >
               
               Explore Our Specialities
@@ -72,7 +72,7 @@ function Hero() {
   >{pillars.map(
     (p) => <li key={p} className="inline-flex items-center gap-2.5 text-sm text-ink-soft"><span
       aria-hidden="true"
-      className="h-1.5 w-1.5 rounded-full bg-brand-fresh"
+      className="h-1.5 w-1.5 rounded-full bg-brand-sky"
     />{p}</li>
   )}</motion.ul></div>{
     /* Right */
@@ -80,7 +80,7 @@ function Hero() {
     initial={{ opacity: 0 }}
     animate={{ opacity: 1 }}
     transition={{ duration: 1, ease: EASE, delay: 0.2 }}
-    className="organic-hero-mask relative aspect-[4/5] w-full overflow-hidden bg-brand-mint lg:aspect-[4/4.6]"
+    className="organic-hero-mask relative aspect-[4/5] w-full overflow-hidden bg-brand-white lg:aspect-[4/4.6]"
   ><motion.img
     src={HERO_IMAGE}
     alt="A doctor sitting with an elderly patient and her daughter in a bright hospital consultation lounge"
@@ -100,7 +100,7 @@ function Hero() {
     ><div
       className="animate-float rounded-2xl bg-white/95 px-5 py-4 shadow-[0_14px_40px_-18px_rgba(23,43,77,0.35)] backdrop-blur"
       style={{ animationDelay: `${card.delay}s` }}
-    ><p className="font-display text-2xl leading-none text-brand-green">{card.big}</p><p className="mt-1.5 text-[11px] uppercase tracking-label text-ink-muted">{card.small}</p></div></motion.div>
+    ><p className="font-display text-2xl leading-none text-brand-blue">{card.big}</p><p className="mt-1.5 text-[11px] uppercase tracking-label text-ink-muted">{card.small}</p></div></motion.div>
   )}</div></div></section>;
 }
 export {

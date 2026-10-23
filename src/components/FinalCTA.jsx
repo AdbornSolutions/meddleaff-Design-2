@@ -5,10 +5,10 @@ function FinalCTA() {
   return <section
     id="contact"
     aria-labelledby="cta-heading"
-    className="relative w-full overflow-hidden bg-gradient-to-br from-brand-navy via-[#0F3B48] to-brand-green"
+    className="relative w-full overflow-hidden bg-gradient-to-br from-brand-navy via-[#1E3A8A] to-brand-blue"
   >{
     /* abstract medical shapes */
-  }<div aria-hidden="true" className="pointer-events-none absolute inset-0"><span className="absolute -left-24 top-1/2 h-[420px] w-[420px] -translate-y-1/2 rounded-full border border-white/10" /><span className="absolute -left-10 top-1/2 h-[260px] w-[260px] -translate-y-1/2 rounded-full border border-white/10" /><span className="absolute -right-32 -top-24 h-[520px] w-[520px] rounded-full border border-white/10" /><span className="absolute bottom-0 right-1/4 h-40 w-px bg-white/10" /></div><div className="relative mx-auto max-w-[1400px] px-6 py-24 text-center md:px-8 lg:py-36"><Reveal><p className="text-[11px] uppercase tracking-label text-brand-gold">
+  }<div aria-hidden="true" className="pointer-events-none absolute inset-0"><span className="absolute -left-24 top-1/2 h-[420px] w-[420px] -translate-y-1/2 rounded-full border border-white/10" /><span className="absolute -left-10 top-1/2 h-[260px] w-[260px] -translate-y-1/2 rounded-full border border-white/10" /><span className="absolute -right-32 -top-24 h-[520px] w-[520px] rounded-full border border-white/10" /><span className="absolute bottom-0 right-1/4 h-40 w-px bg-white/10" /></div><div className="relative mx-auto max-w-[1400px] px-6 py-24 text-center md:px-8 lg:py-36"><Reveal><p className="text-[11px] uppercase tracking-label text-brand-ice">
             Book an appointment
           </p></Reveal><Reveal delay={0.08}><h2
     id="cta-heading"
@@ -22,7 +22,7 @@ function FinalCTA() {
             Take the first step towards better health with Meddleaff Healthcare.
           </p></Reveal><Reveal delay={0.2}><div className="mt-11 flex flex-wrap items-center justify-center gap-3"><SiteLink
     to="/contact"
-    className="inline-flex items-center rounded-full bg-white px-8 py-4 text-sm font-medium text-brand-navy transition-colors duration-200 ease-premium hover:bg-brand-cream"
+    className="inline-flex items-center rounded-full bg-white px-8 py-4 text-sm font-medium text-brand-navy transition-colors duration-200 ease-premium hover:bg-brand-white"
   >
               
               Book an Appointment

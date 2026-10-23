@@ -79,170 +79,191 @@ const specialities = [
   {
     "number": "01",
     "slug": "womens-health-reproductive-medicine",
-    "title": "Women's Health & Reproductive Medicine",
-    "subtitle": "Care through every life stage",
-    "description": "Personalised consultations for gynaecological health, reproductive wellness and pregnancy-related concerns.",
-    "overview": "Personalised consultations for gynaecological health, reproductive wellness and pregnancy-related concerns. Your consultation begins with a review of symptoms, medical history and relevant reports. The treating team will discuss suitable investigations, care options and follow-up based on the assessment.",
+    "title": "Department of Obstetrics & Gynaecology",
+    "subtitle": "Complete women's health care",
+    "description": "Consultations for pregnancy, menstrual health and gynaecological wellbeing.",
+    "overview": "Consultations for pregnancy, menstrual health and gynaecological wellbeing. The care team can help with department-specific enquiries and the next steps for your visit.",
     "concerns": [
-      "Menstrual and hormonal concerns",
-      "Reproductive health and family planning",
-      "Pregnancy-related consultations",
+      "Pregnancy and antenatal consultations",
+      "Menstrual and gynaecological concerns",
+      "Reproductive health questions",
       "Menopause-related concerns"
     ],
     "care": [
-      "Review of symptoms, medical history and relevant reports",
-      "Discussion of suitable care options and any recommended investigations",
-      "An individual plan for treatment, referral or follow-up"
+      "Discussion of your needs and relevant medical history",
+      "Review of available reports and recommended next steps",
+      "Guidance on preparation and follow-up"
     ],
     "image": "/images/specialities/womens-health-reproductive-medicine.svg",
-    "imageAlt": "Medical illustration representing Women's Health & Reproductive Medicine"
+    "imageAlt": "Medical illustration representing Obstetrics & Gynaecology"
   },
   {
     "number": "02",
-    "slug": "general-laparoscopic-surgery",
-    "title": "General & Laparoscopic Surgery",
-    "subtitle": "Clear guidance on surgical care",
-    "description": "Assessment of general surgical concerns, with laparoscopic approaches considered where clinically appropriate.",
-    "overview": "Assessment of general surgical concerns, with laparoscopic approaches considered where clinically appropriate. Your consultation begins with a review of symptoms, medical history and relevant reports. The treating team will discuss suitable investigations, care options and follow-up based on the assessment.",
+    "slug": "paediatrics",
+    "title": "Department of Paediatrics",
+    "subtitle": "Child Health Care",
+    "description": "Care for children, with guidance for parents on growth, development and everyday health concerns.",
+    "overview": "Care for children, with guidance for parents on growth, development and everyday health concerns. The care team can help with department-specific enquiries and the next steps for your visit.",
     "concerns": [
-      "Hernia assessment",
-      "Gallbladder-related concerns",
-      "Appendix-related concerns",
-      "Surgical treatment planning"
+      "Child health consultations",
+      "Growth and development questions",
+      "Common childhood health concerns",
+      "Preventive care guidance"
     ],
     "care": [
-      "Review of symptoms, medical history and relevant reports",
-      "Discussion of suitable care options and any recommended investigations",
-      "An individual plan for treatment, referral or follow-up"
+      "Discussion of your needs and relevant medical history",
+      "Review of available reports and recommended next steps",
+      "Guidance on preparation and follow-up"
     ],
-    "image": "/images/specialities/general-laparoscopic-surgery.svg",
-    "imageAlt": "Medical illustration representing General & Laparoscopic Surgery"
+    "image": "/images/specialities/paediatrics.svg",
+    "imageAlt": "Medical illustration representing Paediatrics"
   },
   {
     "number": "03",
-    "slug": "diabetology-rheumatology-internal-medicine",
-    "title": "Diabetology, Rheumatology & Internal Medicine",
-    "subtitle": "Support for long-term wellbeing",
-    "description": "Coordinated assessment of adult medical conditions, diabetes and joint or inflammatory concerns.",
-    "overview": "Coordinated assessment of adult medical conditions, diabetes and joint or inflammatory concerns. Your consultation begins with a review of symptoms, medical history and relevant reports. The treating team will discuss suitable investigations, care options and follow-up based on the assessment.",
+    "slug": "general-laparoscopic-surgery",
+    "title": "Department of General Surgery",
+    "subtitle": "General surgical care",
+    "description": "Assessment and guidance for general surgical concerns and treatment planning.",
+    "overview": "Assessment and guidance for general surgical concerns and treatment planning. The care team can help with department-specific enquiries and the next steps for your visit.",
     "concerns": [
-      "Diabetes management",
-      "General physician consultations",
-      "Blood pressure concerns",
-      "Joint and inflammatory disorders"
+      "General surgical consultations",
+      "Review of symptoms and reports",
+      "Discussion of treatment options",
+      "Preparation and follow-up questions"
     ],
     "care": [
-      "Review of symptoms, medical history and relevant reports",
-      "Discussion of suitable care options and any recommended investigations",
-      "An individual plan for treatment, referral or follow-up"
+      "Discussion of your needs and relevant medical history",
+      "Review of available reports and recommended next steps",
+      "Guidance on preparation and follow-up"
     ],
-    "image": "/images/specialities/diabetology-rheumatology-internal-medicine.svg",
-    "imageAlt": "Medical illustration representing Diabetology, Rheumatology & Internal Medicine"
+    "image": "/images/specialities/general-laparoscopic-surgery.svg",
+    "imageAlt": "Medical illustration representing General Surgery"
   },
   {
     "number": "04",
-    "slug": "arthroscopy-joint-replacement-sports-medicine",
-    "title": "Arthroscopy, Joint Replacement & Sports Medicine",
-    "subtitle": "Care that supports movement",
-    "description": "Assessment of joint pain, sports injuries and mobility concerns, with options based on individual clinical findings.",
-    "overview": "Assessment of joint pain, sports injuries and mobility concerns, with options based on individual clinical findings. Your consultation begins with a review of symptoms, medical history and relevant reports. The treating team will discuss suitable investigations, care options and follow-up based on the assessment.",
+    "slug": "diabetology-rheumatology-internal-medicine",
+    "title": "Department of Medicine",
+    "subtitle": "Complete General Health Care",
+    "description": "General medical consultations focused on symptoms, ongoing health concerns and overall wellbeing.",
+    "overview": "General medical consultations focused on symptoms, ongoing health concerns and overall wellbeing. The care team can help with department-specific enquiries and the next steps for your visit.",
     "concerns": [
-      "Sports injuries",
-      "Knee and shoulder concerns",
-      "Joint degeneration",
-      "Joint replacement evaluation"
+      "General health concerns",
+      "Persistent symptoms",
+      "Ongoing medical conditions",
+      "Review of reports and follow-up"
     ],
     "care": [
-      "Review of symptoms, medical history and relevant reports",
-      "Discussion of suitable care options and any recommended investigations",
-      "An individual plan for treatment, referral or follow-up"
+      "Discussion of your needs and relevant medical history",
+      "Review of available reports and recommended next steps",
+      "Guidance on preparation and follow-up"
     ],
-    "image": "/images/specialities/arthroscopy-joint-replacement-sports-medicine.svg",
-    "imageAlt": "Medical illustration representing Arthroscopy, Joint Replacement & Sports Medicine"
+    "image": "/images/specialities/diabetology-rheumatology-internal-medicine.svg",
+    "imageAlt": "Medical illustration representing Medicine"
   },
   {
     "number": "05",
-    "slug": "chest-medicine-pulmonology",
-    "title": "Chest Medicine & Pulmonology",
-    "subtitle": "A focus on respiratory health",
-    "description": "Consultations for persistent cough, breathing difficulties and conditions affecting the lungs and airways.",
-    "overview": "Consultations for persistent cough, breathing difficulties and conditions affecting the lungs and airways. Your consultation begins with a review of symptoms, medical history and relevant reports. The treating team will discuss suitable investigations, care options and follow-up based on the assessment.",
+    "slug": "cosmetology",
+    "title": "Department of Cosmetology",
+    "subtitle": "Complete Skin Care",
+    "description": "Consultations focused on skin concerns and individual skin care needs.",
+    "overview": "Consultations focused on skin concerns and individual skin care needs. The care team can help with department-specific enquiries and the next steps for your visit.",
     "concerns": [
-      "Persistent cough",
-      "Asthma-related concerns",
-      "Breathlessness",
-      "Chronic respiratory symptoms"
+      "Skin care concerns",
+      "Changes in skin appearance",
+      "Review of current skin care",
+      "Discussion of suitable care options"
     ],
     "care": [
-      "Review of symptoms, medical history and relevant reports",
-      "Discussion of suitable care options and any recommended investigations",
-      "An individual plan for treatment, referral or follow-up"
+      "Discussion of your needs and relevant medical history",
+      "Review of available reports and recommended next steps",
+      "Guidance on preparation and follow-up"
     ],
-    "image": "/images/specialities/chest-medicine-pulmonology.svg",
-    "imageAlt": "Medical illustration representing Chest Medicine & Pulmonology"
+    "image": "/images/specialities/cosmetology.svg",
+    "imageAlt": "Medical illustration representing Cosmetology"
   },
   {
     "number": "06",
-    "slug": "orthopaedic-spine-surgery",
-    "title": "Orthopaedic & Spine Surgery",
-    "subtitle": "Supporting strength and mobility",
-    "description": "Evaluation of bone, joint, back and spine concerns with treatment planning tailored to individual needs.",
-    "overview": "Evaluation of bone, joint, back and spine concerns with treatment planning tailored to individual needs. Your consultation begins with a review of symptoms, medical history and relevant reports. The treating team will discuss suitable investigations, care options and follow-up based on the assessment.",
+    "slug": "endocrinology",
+    "title": "Department of Endocrinology",
+    "subtitle": "Hormonal and metabolic health",
+    "description": "Consultations for hormone-related concerns and metabolic health.",
+    "overview": "Consultations for hormone-related concerns and metabolic health. The care team can help with department-specific enquiries and the next steps for your visit.",
     "concerns": [
-      "Back and neck pain",
-      "Spine consultations",
-      "Musculoskeletal injuries",
-      "Orthopaedic surgical assessment"
+      "Hormonal health concerns",
+      "Thyroid-related questions",
+      "Diabetes and metabolic health",
+      "Review of relevant reports"
     ],
     "care": [
-      "Review of symptoms, medical history and relevant reports",
-      "Discussion of suitable care options and any recommended investigations",
-      "An individual plan for treatment, referral or follow-up"
+      "Discussion of your needs and relevant medical history",
+      "Review of available reports and recommended next steps",
+      "Guidance on preparation and follow-up"
     ],
-    "image": "/images/specialities/orthopaedic-spine-surgery.svg",
-    "imageAlt": "Medical illustration representing Orthopaedic & Spine Surgery"
+    "image": "/images/specialities/endocrinology.svg",
+    "imageAlt": "Medical illustration representing Endocrinology"
   },
   {
     "number": "07",
-    "slug": "ent",
-    "title": "ENT (Ear, Nose & Throat)",
-    "subtitle": "Specialist attention to everyday senses",
-    "description": "Evaluation of ear, nose and throat concerns, including sinus symptoms, hearing issues and voice changes.",
-    "overview": "Evaluation of ear, nose and throat concerns, including sinus symptoms, hearing issues and voice changes. Your consultation begins with a review of symptoms, medical history and relevant reports. The treating team will discuss suitable investigations, care options and follow-up based on the assessment.",
+    "slug": "preventive-health-care",
+    "title": "Department of Preventive Health Care",
+    "subtitle": "A focus on long-term wellbeing",
+    "description": "Health reviews and preventive care conversations shaped around age, history and individual needs.",
+    "overview": "Health reviews and preventive care conversations shaped around age, history and individual needs. The care team can help with department-specific enquiries and the next steps for your visit.",
     "concerns": [
-      "Ear pain and hearing concerns",
-      "Sinus and nasal symptoms",
-      "Throat discomfort",
-      "Voice-related concerns"
+      "Routine health reviews",
+      "Personal and family health history",
+      "Screening questions",
+      "Lifestyle and follow-up guidance"
     ],
     "care": [
-      "Review of symptoms, medical history and relevant reports",
-      "Discussion of suitable care options and any recommended investigations",
-      "An individual plan for treatment, referral or follow-up"
+      "Discussion of your needs and relevant medical history",
+      "Review of available reports and recommended next steps",
+      "Guidance on preparation and follow-up"
     ],
-    "image": "/images/specialities/ent.svg",
-    "imageAlt": "Medical illustration representing ENT (Ear, Nose & Throat)"
+    "image": "/images/specialities/preventive-health-care.svg",
+    "imageAlt": "Medical illustration representing Preventive Health Care"
   },
   {
     "number": "08",
-    "slug": "anaesthesiology-perioperative-care",
-    "title": "Anaesthesiology & Perioperative Care",
-    "subtitle": "Care before, during and after surgery",
-    "description": "Pre-procedure assessment and perioperative support focused on patient comfort, monitoring and individual clinical needs.",
-    "overview": "Pre-procedure assessment and perioperative support focused on patient comfort, monitoring and individual clinical needs. Your consultation begins with a review of symptoms, medical history and relevant reports. The treating team will discuss suitable investigations, care options and follow-up based on the assessment.",
+    "slug": "pathology",
+    "title": "Department of Pathology",
+    "subtitle": "Laboratory diagnostic services",
+    "description": "Laboratory services supporting clinical assessment and ongoing care.",
+    "overview": "Laboratory services supporting clinical assessment and ongoing care. The care team can help with department-specific enquiries and the next steps for your visit.",
     "concerns": [
-      "Pre-anaesthesia assessment",
-      "Medication and allergy review",
-      "Anaesthesia planning",
-      "Post-procedure recovery guidance"
+      "Clinician-recommended laboratory tests",
+      "Test preparation questions",
+      "Sample collection information",
+      "Reports for review with your clinician"
     ],
     "care": [
-      "Review of symptoms, medical history and relevant reports",
-      "Discussion of suitable care options and any recommended investigations",
-      "An individual plan for treatment, referral or follow-up"
+      "Discussion of your needs and relevant medical history",
+      "Review of available reports and recommended next steps",
+      "Guidance on preparation and follow-up"
     ],
-    "image": "/images/specialities/anaesthesiology-perioperative-care.svg",
-    "imageAlt": "Medical illustration representing Anaesthesiology & Perioperative Care"
+    "image": "/images/specialities/pathology.svg",
+    "imageAlt": "Medical illustration representing Pathology"
+  },
+  {
+    "number": "09",
+    "slug": "radiology",
+    "title": "Department of Radiology",
+    "subtitle": "Diagnostic imaging services",
+    "description": "Imaging services supporting clinical evaluation and care planning.",
+    "overview": "Imaging services supporting clinical evaluation and care planning. The care team can help with department-specific enquiries and the next steps for your visit.",
+    "concerns": [
+      "Clinician-recommended imaging",
+      "Examination preparation questions",
+      "Relevant medical history and reports",
+      "Imaging reports for clinical review"
+    ],
+    "care": [
+      "Discussion of your needs and relevant medical history",
+      "Review of available reports and recommended next steps",
+      "Guidance on preparation and follow-up"
+    ],
+    "image": "/images/specialities/radiology.svg",
+    "imageAlt": "Medical illustration representing Radiology"
   }
 ];
 

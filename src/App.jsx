@@ -61,7 +61,7 @@ function App() {
   else if (pathname.startsWith("/patient-guide/")) page = <PatientGuidePage pathname={pathname} />;
   else if (pathname === "/patient-corner" || pathname.startsWith("/patient-corner/")) page = <PatientCornerPage pathname={pathname} />;
   else page = <NotFoundPage />;
-  return <div className="min-h-screen w-full bg-brand-cream"><Header pathname={pathname} />{page}<Footer /></div>;
+  return <div className="min-h-screen w-full bg-brand-white"><Header pathname={pathname} />{page}<Footer /></div>;
 }
 export {
   App

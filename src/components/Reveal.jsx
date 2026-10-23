@@ -30,13 +30,13 @@ function ImageReveal({
 }
 function SectionLabel({
   children,
-  tone = "green"
+  tone = "blue"
 }) {
   return <span
-    className={`inline-flex items-center gap-3 text-[11px] font-medium uppercase tracking-label ${tone === "green" ? "text-brand-green" : "text-white/70"}`}
+    className={`inline-flex items-center gap-3 text-[11px] font-medium uppercase tracking-label ${tone === "blue" ? "text-brand-blue" : "text-white/70"}`}
   ><span
     aria-hidden="true"
-    className={`h-px w-8 ${tone === "green" ? "bg-brand-fresh" : "bg-white/40"}`}
+    className={`h-px w-8 ${tone === "blue" ? "bg-brand-sky" : "bg-white/40"}`}
   />{children}</span>;
 }
 export {

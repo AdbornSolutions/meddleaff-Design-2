@@ -1,3 +1,4 @@
+import { specialities } from "../data/specialities";
 import { ArrowRightIcon, CheckIcon } from "lucide-react";
 import { Reveal, ImageReveal, SectionLabel } from "./Reveal";
 import { aboutFeatures } from "../data/site";
@@ -12,27 +13,27 @@ function About() {
   }<div className="relative"><div className="grid grid-cols-5 gap-4"><ImageReveal
     src={IMG_CONSULT}
     alt="A doctor listening attentively to a patient across a consultation desk"
-    className="col-span-3 aspect-[3/4] rounded-[2rem] bg-brand-mint"
+    className="col-span-3 aspect-[3/4] rounded-[2rem] bg-brand-white"
   /><div className="col-span-2 flex flex-col gap-4 pt-10"><ImageReveal
     src={IMG_INTERIOR}
     alt="The bright, plant-filled atrium of Meddleaff Healthcare"
-    className="aspect-[4/5] rounded-[2rem] bg-brand-mint"
+    className="aspect-[4/5] rounded-[2rem] bg-brand-white"
     delay={0.12}
   /><ImageReveal
     src={IMG_CARE}
     alt="A nurse gently holding an older patient's hand"
-    className="aspect-square rounded-[2rem] bg-brand-mint"
+    className="aspect-square rounded-[2rem] bg-brand-white"
     delay={0.24}
   /></div></div><Reveal
     delay={0.35}
-    className="absolute -bottom-8 left-6 hidden rounded-2xl bg-brand-green px-7 py-6 text-white shadow-[0_20px_50px_-24px_rgba(11,93,76,0.6)] lg:block"
-  ><p className="font-display text-3xl font-light leading-none">9</p><p className="mt-2 text-[11px] uppercase tracking-label text-white/70">
+    className="absolute -bottom-8 left-6 hidden rounded-2xl bg-brand-blue px-7 py-6 text-white shadow-[0_20px_50px_-24px_rgba(29,78,216,0.6)] lg:block"
+  ><p className="font-display text-3xl font-light leading-none">{specialities.length}</p><p className="mt-2 text-[11px] uppercase tracking-label text-white/70">
               Medical specialities
             </p></Reveal></div>{
     /* Copy */
   }<div><Reveal><SectionLabel>Who We Are</SectionLabel></Reveal><Reveal delay={0.08}><h2 className="mt-6 font-display text-[clamp(2.25rem,4.2vw,3.75rem)] font-light leading-[1.04] tracking-[-0.02em] text-brand-navy">
               Healthcare Designed
-              <br /><span className="text-brand-green">Around You.</span></h2></Reveal><Reveal delay={0.14}><p className="mt-7 max-w-xl text-[17px] leading-relaxed text-ink-soft">
+              <br /><span className="text-brand-blue">Around You.</span></h2></Reveal><Reveal delay={0.14}><p className="mt-7 max-w-xl text-[17px] leading-relaxed text-ink-soft">
               {company.shortIntro}
             </p></Reveal><ul className="mt-10 grid gap-x-8 gap-y-4 sm:grid-cols-2">{aboutFeatures.map(
     (feature, i) => <Reveal
@@ -40,10 +41,10 @@ function About() {
       key={feature}
       delay={0.2 + i * 0.06}
       className="flex items-start gap-3 text-[15px] text-brand-navy"
-    ><span className="mt-0.5 grid h-5 w-5 shrink-0 place-items-center rounded-full bg-brand-mint text-brand-green"><CheckIcon className="h-3 w-3" strokeWidth={3} aria-hidden="true" /></span>{feature}</Reveal>
+    ><span className="mt-0.5 grid h-5 w-5 shrink-0 place-items-center rounded-full bg-brand-white text-brand-blue"><CheckIcon className="h-3 w-3" strokeWidth={3} aria-hidden="true" /></span>{feature}</Reveal>
   )}</ul><Reveal delay={0.45}><SiteLink
     to="/about"
-    className="group mt-12 inline-flex items-center gap-2 border-b border-brand-navy/20 pb-2 text-sm font-medium text-brand-navy transition-colors duration-200 ease-premium hover:border-brand-green hover:text-brand-green"
+    className="group mt-12 inline-flex items-center gap-2 border-b border-brand-navy/20 pb-2 text-sm font-medium text-brand-navy transition-colors duration-200 ease-premium hover:border-brand-blue hover:text-brand-blue"
   >
               
               Discover Meddleaff Healthcare

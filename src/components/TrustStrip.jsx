@@ -7,7 +7,7 @@ function TrustStrip() {
       key={point.title}
       delay={i * 0.08}
       className="flex flex-col gap-1.5 border-brand-navy/10 py-8 sm:border-l sm:py-12 sm:pl-8 sm:first:border-l-0 sm:first:pl-0 lg:pl-10"
-    ><span className="text-[11px] font-medium uppercase tracking-label text-brand-green">{point.title}</span><span className="font-display text-xl font-light text-brand-navy">{point.copy}</span></Reveal>
+    ><span className="text-[11px] font-medium uppercase tracking-label text-brand-blue">{point.title}</span><span className="font-display text-xl font-light text-brand-navy">{point.copy}</span></Reveal>
   )}</ul></div></section>;
 }
 export {

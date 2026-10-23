@@ -9,20 +9,20 @@ function Insights() {
   >
                 
                 Guidance for a
-                <br /><span className="text-brand-green">Healthier Tomorrow.</span></h2></Reveal></div></div><div className="mt-16 grid gap-10 md:grid-cols-3 md:gap-8">{insights.map(
+                <br /><span className="text-brand-blue">Healthier Tomorrow.</span></h2></Reveal></div></div><div className="mt-16 grid gap-10 md:grid-cols-3 md:gap-8">{insights.map(
     (article, i) => <Reveal
       as="article"
       key={article.title}
       delay={i * 0.1}
       className="group flex h-full flex-col"
-    ><SiteLink to="/blogs" className="flex h-full flex-col"><div className="aspect-[4/3] overflow-hidden rounded-[1.75rem] bg-brand-mint"><img
+    ><SiteLink to="/blogs" className="flex h-full flex-col"><div className="aspect-[4/3] overflow-hidden rounded-[1.75rem] bg-brand-white"><img
       src={article.image}
       alt={article.title}
       loading="lazy"
       className="h-full w-full object-cover transition-transform duration-500 ease-premium group-hover:scale-[1.04]"
-    /></div><p className="mt-6 text-[11px] uppercase tracking-label text-brand-green">{article.category}<span className="mx-2 text-brand-navy/20" aria-hidden="true">
+    /></div><p className="mt-6 text-[11px] uppercase tracking-label text-brand-blue">{article.category}<span className="mx-2 text-brand-navy/20" aria-hidden="true">
                     •
-                  </span><span className="text-ink-muted">{article.readTime}</span></p><h3 className="mt-3 font-display text-2xl font-light leading-snug text-brand-navy">{article.title}</h3><p className="mt-3 text-[15px] leading-relaxed text-ink-soft">{article.excerpt}</p><span className="mt-auto inline-flex items-center gap-2 pt-6 text-sm font-medium text-brand-navy transition-colors duration-200 ease-premium group-hover:text-brand-green">
+                  </span><span className="text-ink-muted">{article.readTime}</span></p><h3 className="mt-3 font-display text-2xl font-light leading-snug text-brand-navy">{article.title}</h3><p className="mt-3 text-[15px] leading-relaxed text-ink-soft">{article.excerpt}</p><span className="mt-auto inline-flex items-center gap-2 pt-6 text-sm font-medium text-brand-navy transition-colors duration-200 ease-premium group-hover:text-brand-blue">
                   Read Article
                   <ArrowRightIcon
       className="h-4 w-4 transition-transform duration-200 ease-premium group-hover:translate-x-[5px]"

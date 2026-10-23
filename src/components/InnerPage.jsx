@@ -9,8 +9,8 @@ function VitalsLine({ className = "" }) {
 }
 
 function PageHero({ eyebrow, title, lead, image, imageAlt, children }) {
-  return <section className="relative overflow-hidden bg-brand-cream pt-36 lg:pt-44">
-    <div className="pointer-events-none absolute inset-0" aria-hidden="true"><span className="animate-float-slow absolute -right-24 top-24 h-72 w-72 rounded-full bg-brand-green/[.055] blur-2xl" /><span className="absolute -left-24 bottom-10 h-56 w-56 rounded-full border border-brand-green/10" /></div>
+  return <section className="relative overflow-hidden bg-brand-white pt-36 lg:pt-44">
+    <div className="pointer-events-none absolute inset-0" aria-hidden="true"><span className="animate-float-slow absolute -right-24 top-24 h-72 w-72 rounded-full bg-brand-blue/[.055] blur-2xl" /><span className="absolute -left-24 bottom-10 h-56 w-56 rounded-full border border-brand-blue/10" /></div>
     <div className={`relative mx-auto grid max-w-[1400px] items-center gap-12 px-6 pb-16 md:px-8 lg:pb-24 ${image ? "lg:grid-cols-[1.05fr_.85fr]" : ""}`}>
       <div className="max-w-4xl">
         <Reveal><SectionLabel>{eyebrow}</SectionLabel></Reveal>
@@ -19,18 +19,18 @@ function PageHero({ eyebrow, title, lead, image, imageAlt, children }) {
         {children && <Reveal delay={0.2}><div className="mt-9">{children}</div></Reveal>}
       </div>
       {image && <Reveal delay={0.12} className="relative">
-        <div className="aspect-[4/4.7] overflow-hidden rounded-[2.5rem] bg-brand-mint">
+        <div className="aspect-[4/4.7] overflow-hidden rounded-[2.5rem] bg-brand-white">
           <img src={image} alt={imageAlt} loading="eager" fetchPriority="high" decoding="async" className="h-full w-full object-cover" />
         </div>
       </Reveal>}
     </div>
-    <div className="text-brand-green/45"><VitalsLine /></div>
+    <div className="text-brand-blue/45"><VitalsLine /></div>
   </section>;
 }
 
 function SectionHeading({ eyebrow, title, copy, align = "left", tone = "dark" }) {
   return <div className={align === "center" ? "mx-auto max-w-3xl text-center" : "max-w-3xl"}>
-    <Reveal><SectionLabel tone={tone === "light" ? "light" : "green"}>{eyebrow}</SectionLabel></Reveal>
+    <Reveal><SectionLabel tone={tone === "light" ? "light" : "blue"}>{eyebrow}</SectionLabel></Reveal>
     <Reveal delay={0.08}><h2 className={`mt-6 font-display text-[clamp(2.25rem,4.4vw,4rem)] font-medium leading-[1.03] tracking-[-.025em] ${tone === "light" ? "text-white" : "text-brand-navy"}`}>{title}</h2></Reveal>
     {copy && <Reveal delay={0.14}><p className={`mt-6 text-[16px] leading-relaxed md:text-[17px] ${tone === "light" ? "text-white/65" : "text-ink-soft"}`}>{copy}</p></Reveal>}
   </div>;
@@ -39,8 +39,8 @@ function SectionHeading({ eyebrow, title, copy, align = "left", tone = "dark" })
 function ConsultationBand({ title = "Ready to speak with our care team?", copy = "Share your concern and our team will help you plan the next step." }) {
   return <section className="bg-brand-navy py-20 text-white">
     <div className="mx-auto flex max-w-[1400px] flex-col items-start justify-between gap-8 px-6 md:px-8 lg:flex-row lg:items-center">
-      <div className="max-w-3xl"><p className="font-mono text-[10px] uppercase tracking-label text-brand-gold">Consultation</p><h2 className="mt-4 font-display text-4xl font-medium md:text-5xl">{title}</h2><p className="mt-4 text-white/65">{copy}</p></div>
-      <SiteLink to="/contact" className="group inline-flex shrink-0 items-center gap-3 rounded-full bg-white px-7 py-4 text-sm font-semibold text-brand-navy transition hover:bg-brand-cream">Book a Consultation <ArrowRightIcon className="h-4 w-4 transition-transform group-hover:translate-x-1" /></SiteLink>
+      <div className="max-w-3xl"><p className="font-mono text-[10px] uppercase tracking-label text-brand-ice">Consultation</p><h2 className="mt-4 font-display text-4xl font-medium md:text-5xl">{title}</h2><p className="mt-4 text-white/65">{copy}</p></div>
+      <SiteLink to="/contact" className="group inline-flex shrink-0 items-center gap-3 rounded-full bg-white px-7 py-4 text-sm font-semibold text-brand-navy transition hover:bg-brand-white">Book a Consultation <ArrowRightIcon className="h-4 w-4 transition-transform group-hover:translate-x-1" /></SiteLink>
     </div>
   </section>;
 }
