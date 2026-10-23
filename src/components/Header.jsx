@@ -20,7 +20,7 @@ function getMenuLinks(item) {
 }
 
 function isActive(item, pathname) {
-  if (item.menu === "specialities") return pathname === "/treatments" || pathname.startsWith("/specialities/");
+  if (item.menu === "specialities") return pathname === "/specialities" || pathname === "/treatments" || pathname.startsWith("/specialities/");
   if (item.menu === "patientGuide") return pathname.startsWith("/patient-guide/");
   if (item.label === "Media") return pathname === "/gallery" || pathname === "/blogs";
   return pathname === item.href;
@@ -40,7 +40,7 @@ function DesktopDropdown({ item, links, pathname, open, setOpen }) {
     </button>
     <AnimatePresence>{open && <motion.div initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: 8 }} transition={{ duration: .18 }} className={`absolute top-full z-50 overflow-hidden rounded-[1.5rem] border border-brand-navy/8 bg-white p-3 shadow-[0_24px_70px_-25px_rgba(22,35,60,.35)] ${wide ? "left-0 w-[min(880px,calc(100vw-4rem))]" : "left-0 w-[330px]"}`}>
       <div className={`${wide ? "grid grid-cols-2" : "grid"}`}>{links.map((link) => <SiteLink key={link.href} to={link.href} onClick={() => setOpen(null)} className={`border-b border-brand-navy/8 px-4 py-3 text-sm leading-snug transition hover:bg-brand-mint/55 hover:text-brand-green ${pathname === link.href ? "bg-brand-mint/55 text-brand-green" : "text-brand-navy"}`}>{link.label}</SiteLink>)}</div>
-      {item.menu === "specialities" && <SiteLink to="/treatments" onClick={() => setOpen(null)} className="mt-3 flex items-center justify-center rounded-xl bg-brand-green px-5 py-3 text-sm font-semibold text-white">View All Specialities</SiteLink>}
+      {item.menu === "specialities" && <SiteLink to="/specialities" onClick={() => setOpen(null)} className="mt-3 flex items-center justify-center rounded-xl bg-brand-green px-5 py-3 text-sm font-semibold text-white">View All Specialities</SiteLink>}
     </motion.div>}</AnimatePresence>
   </li>;
 }

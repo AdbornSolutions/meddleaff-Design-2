@@ -38,6 +38,7 @@ function App() {
       "/about": "About Us | Meddleaff Healthcare",
       "/doctor-profile": "Dr. Aaliya Amreen | Meddleaff Healthcare",
       "/treatments": "Treatments | Meddleaff Healthcare",
+      "/specialities": "Medical Specialities | Meddleaff",
       "/hospital-affiliation": "Hospital Affiliation | Meddleaff Healthcare",
       "/gallery": "Gallery | Meddleaff Healthcare",
       "/blogs": "Health Insights | Meddleaff Healthcare",
@@ -48,6 +49,7 @@ function App() {
   }, [pathname]);
   let page;
   if (pathname === "/") page = <HomePage />;
+  else if (pathname === "/specialities") page = <main><Specialities directory /></main>;
   else if (pathname === "/about") page = <AboutPage />;
   else if (pathname === "/doctor-profile") page = <DoctorProfilePage />;
   else if (pathname === "/treatments") page = <TreatmentsPage />;

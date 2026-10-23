@@ -1,4 +1,4 @@
-const specialities = [
+const legacySpecialities = [
   {
     number: "01", slug: "pregnancy-antenatal-care", title: "Pregnancy & Antenatal Care", subtitle: "Support Through Every Trimester",
     description: "Structured antenatal consultations focused on maternal health, pregnancy progress and clear preparation for the months ahead.",
@@ -73,4 +73,177 @@ const specialities = [
   }
 ];
 
-export { specialities };
+
+
+const specialities = [
+  {
+    "number": "01",
+    "slug": "womens-health-reproductive-medicine",
+    "title": "Women's Health & Reproductive Medicine",
+    "subtitle": "Care through every life stage",
+    "description": "Personalised consultations for gynaecological health, reproductive wellness and pregnancy-related concerns.",
+    "overview": "Personalised consultations for gynaecological health, reproductive wellness and pregnancy-related concerns. Your consultation begins with a review of symptoms, medical history and relevant reports. The treating team will discuss suitable investigations, care options and follow-up based on the assessment.",
+    "concerns": [
+      "Menstrual and hormonal concerns",
+      "Reproductive health and family planning",
+      "Pregnancy-related consultations",
+      "Menopause-related concerns"
+    ],
+    "care": [
+      "Review of symptoms, medical history and relevant reports",
+      "Discussion of suitable care options and any recommended investigations",
+      "An individual plan for treatment, referral or follow-up"
+    ],
+    "image": "/images/specialities/womens-health-reproductive-medicine.svg",
+    "imageAlt": "Medical illustration representing Women's Health & Reproductive Medicine"
+  },
+  {
+    "number": "02",
+    "slug": "general-laparoscopic-surgery",
+    "title": "General & Laparoscopic Surgery",
+    "subtitle": "Clear guidance on surgical care",
+    "description": "Assessment of general surgical concerns, with laparoscopic approaches considered where clinically appropriate.",
+    "overview": "Assessment of general surgical concerns, with laparoscopic approaches considered where clinically appropriate. Your consultation begins with a review of symptoms, medical history and relevant reports. The treating team will discuss suitable investigations, care options and follow-up based on the assessment.",
+    "concerns": [
+      "Hernia assessment",
+      "Gallbladder-related concerns",
+      "Appendix-related concerns",
+      "Surgical treatment planning"
+    ],
+    "care": [
+      "Review of symptoms, medical history and relevant reports",
+      "Discussion of suitable care options and any recommended investigations",
+      "An individual plan for treatment, referral or follow-up"
+    ],
+    "image": "/images/specialities/general-laparoscopic-surgery.svg",
+    "imageAlt": "Medical illustration representing General & Laparoscopic Surgery"
+  },
+  {
+    "number": "03",
+    "slug": "diabetology-rheumatology-internal-medicine",
+    "title": "Diabetology, Rheumatology & Internal Medicine",
+    "subtitle": "Support for long-term wellbeing",
+    "description": "Coordinated assessment of adult medical conditions, diabetes and joint or inflammatory concerns.",
+    "overview": "Coordinated assessment of adult medical conditions, diabetes and joint or inflammatory concerns. Your consultation begins with a review of symptoms, medical history and relevant reports. The treating team will discuss suitable investigations, care options and follow-up based on the assessment.",
+    "concerns": [
+      "Diabetes management",
+      "General physician consultations",
+      "Blood pressure concerns",
+      "Joint and inflammatory disorders"
+    ],
+    "care": [
+      "Review of symptoms, medical history and relevant reports",
+      "Discussion of suitable care options and any recommended investigations",
+      "An individual plan for treatment, referral or follow-up"
+    ],
+    "image": "/images/specialities/diabetology-rheumatology-internal-medicine.svg",
+    "imageAlt": "Medical illustration representing Diabetology, Rheumatology & Internal Medicine"
+  },
+  {
+    "number": "04",
+    "slug": "arthroscopy-joint-replacement-sports-medicine",
+    "title": "Arthroscopy, Joint Replacement & Sports Medicine",
+    "subtitle": "Care that supports movement",
+    "description": "Assessment of joint pain, sports injuries and mobility concerns, with options based on individual clinical findings.",
+    "overview": "Assessment of joint pain, sports injuries and mobility concerns, with options based on individual clinical findings. Your consultation begins with a review of symptoms, medical history and relevant reports. The treating team will discuss suitable investigations, care options and follow-up based on the assessment.",
+    "concerns": [
+      "Sports injuries",
+      "Knee and shoulder concerns",
+      "Joint degeneration",
+      "Joint replacement evaluation"
+    ],
+    "care": [
+      "Review of symptoms, medical history and relevant reports",
+      "Discussion of suitable care options and any recommended investigations",
+      "An individual plan for treatment, referral or follow-up"
+    ],
+    "image": "/images/specialities/arthroscopy-joint-replacement-sports-medicine.svg",
+    "imageAlt": "Medical illustration representing Arthroscopy, Joint Replacement & Sports Medicine"
+  },
+  {
+    "number": "05",
+    "slug": "chest-medicine-pulmonology",
+    "title": "Chest Medicine & Pulmonology",
+    "subtitle": "A focus on respiratory health",
+    "description": "Consultations for persistent cough, breathing difficulties and conditions affecting the lungs and airways.",
+    "overview": "Consultations for persistent cough, breathing difficulties and conditions affecting the lungs and airways. Your consultation begins with a review of symptoms, medical history and relevant reports. The treating team will discuss suitable investigations, care options and follow-up based on the assessment.",
+    "concerns": [
+      "Persistent cough",
+      "Asthma-related concerns",
+      "Breathlessness",
+      "Chronic respiratory symptoms"
+    ],
+    "care": [
+      "Review of symptoms, medical history and relevant reports",
+      "Discussion of suitable care options and any recommended investigations",
+      "An individual plan for treatment, referral or follow-up"
+    ],
+    "image": "/images/specialities/chest-medicine-pulmonology.svg",
+    "imageAlt": "Medical illustration representing Chest Medicine & Pulmonology"
+  },
+  {
+    "number": "06",
+    "slug": "orthopaedic-spine-surgery",
+    "title": "Orthopaedic & Spine Surgery",
+    "subtitle": "Supporting strength and mobility",
+    "description": "Evaluation of bone, joint, back and spine concerns with treatment planning tailored to individual needs.",
+    "overview": "Evaluation of bone, joint, back and spine concerns with treatment planning tailored to individual needs. Your consultation begins with a review of symptoms, medical history and relevant reports. The treating team will discuss suitable investigations, care options and follow-up based on the assessment.",
+    "concerns": [
+      "Back and neck pain",
+      "Spine consultations",
+      "Musculoskeletal injuries",
+      "Orthopaedic surgical assessment"
+    ],
+    "care": [
+      "Review of symptoms, medical history and relevant reports",
+      "Discussion of suitable care options and any recommended investigations",
+      "An individual plan for treatment, referral or follow-up"
+    ],
+    "image": "/images/specialities/orthopaedic-spine-surgery.svg",
+    "imageAlt": "Medical illustration representing Orthopaedic & Spine Surgery"
+  },
+  {
+    "number": "07",
+    "slug": "ent",
+    "title": "ENT (Ear, Nose & Throat)",
+    "subtitle": "Specialist attention to everyday senses",
+    "description": "Evaluation of ear, nose and throat concerns, including sinus symptoms, hearing issues and voice changes.",
+    "overview": "Evaluation of ear, nose and throat concerns, including sinus symptoms, hearing issues and voice changes. Your consultation begins with a review of symptoms, medical history and relevant reports. The treating team will discuss suitable investigations, care options and follow-up based on the assessment.",
+    "concerns": [
+      "Ear pain and hearing concerns",
+      "Sinus and nasal symptoms",
+      "Throat discomfort",
+      "Voice-related concerns"
+    ],
+    "care": [
+      "Review of symptoms, medical history and relevant reports",
+      "Discussion of suitable care options and any recommended investigations",
+      "An individual plan for treatment, referral or follow-up"
+    ],
+    "image": "/images/specialities/ent.svg",
+    "imageAlt": "Medical illustration representing ENT (Ear, Nose & Throat)"
+  },
+  {
+    "number": "08",
+    "slug": "anaesthesiology-perioperative-care",
+    "title": "Anaesthesiology & Perioperative Care",
+    "subtitle": "Care before, during and after surgery",
+    "description": "Pre-procedure assessment and perioperative support focused on patient comfort, monitoring and individual clinical needs.",
+    "overview": "Pre-procedure assessment and perioperative support focused on patient comfort, monitoring and individual clinical needs. Your consultation begins with a review of symptoms, medical history and relevant reports. The treating team will discuss suitable investigations, care options and follow-up based on the assessment.",
+    "concerns": [
+      "Pre-anaesthesia assessment",
+      "Medication and allergy review",
+      "Anaesthesia planning",
+      "Post-procedure recovery guidance"
+    ],
+    "care": [
+      "Review of symptoms, medical history and relevant reports",
+      "Discussion of suitable care options and any recommended investigations",
+      "An individual plan for treatment, referral or follow-up"
+    ],
+    "image": "/images/specialities/anaesthesiology-perioperative-care.svg",
+    "imageAlt": "Medical illustration representing Anaesthesiology & Perioperative Care"
+  }
+];
+
+export { specialities, legacySpecialities };

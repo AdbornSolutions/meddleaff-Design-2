@@ -1,124 +1,26 @@
-import { useEffect, useRef, useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { ArrowRightIcon, ChevronDownIcon } from "lucide-react";
-import { Reveal, SectionLabel } from "./Reveal";
+import { ArrowRightIcon } from "lucide-react";
+import { SectionLabel } from "./Reveal";
 import { specialities } from "../data/specialities";
 import { SiteLink } from "./SiteLink";
-const EASE = [0.23, 1, 0.32, 1];
-function Specialities() {
-  const [active, setActive] = useState(0);
-  const [openMobile, setOpenMobile] = useState(0);
-  const sectionRef = useRef(null);
-  const current = specialities[active];
 
-  useEffect(() => {
-    const desktop = window.matchMedia("(min-width: 1024px)");
-    if (!desktop.matches) return undefined;
-
-    const updateActiveSpeciality = () => {
-      if (!sectionRef.current) return;
-
-      const bounds = sectionRef.current.getBoundingClientRect();
-      const scrollStart = window.innerHeight * 0.7;
-      const scrollDistance = bounds.height + window.innerHeight * 0.25;
-      const progress = Math.min(1, Math.max(0, (scrollStart - bounds.top) / scrollDistance));
-      const nextActive = Math.min(specialities.length - 1, Math.floor(progress * specialities.length));
-
-      setActive(nextActive);
-    };
-
-    updateActiveSpeciality();
-    window.addEventListener("scroll", updateActiveSpeciality, { passive: true });
-    return () => window.removeEventListener("scroll", updateActiveSpeciality);
-  }, []);
-
-  return <section ref={sectionRef} id="specialities" className="w-full bg-brand-mint py-24 lg:py-32"><div className="mx-auto max-w-[1400px] px-6 md:px-8"><div className="max-w-3xl"><Reveal><SectionLabel>Women's Health Services</SectionLabel></Reveal><Reveal delay={0.08}><h2 className="mt-6 font-display text-[clamp(2.25rem,4.6vw,4rem)] font-light leading-[1.04] tracking-[-0.02em] text-brand-navy">
-              Focused Care.
-              <br /><span className="text-brand-green">For Every Life Stage.</span></h2></Reveal></div>{
-    /* Desktop: list + image panel */
-  }<div className="mt-16 hidden gap-14 lg:grid lg:grid-cols-[1fr_0.95fr]"><ul className="border-t border-brand-navy/10">{specialities.map((item, i) => {
-    const isActive = i === active;
-    return <li key={item.title} className="border-b border-brand-navy/10"><button
-      type="button"
-      onMouseEnter={() => setActive(i)}
-      onFocus={() => setActive(i)}
-      onClick={() => setActive(i)}
-      aria-current={isActive}
-      className="group flex w-full items-baseline gap-6 py-5 text-left"
-    ><span
-      className={`w-8 shrink-0 font-display text-sm transition-colors duration-300 ease-premium ${isActive ? "text-brand-green" : "text-ink-muted/50"}`}
-    >{item.number}</span><span className="flex-1"><span
-      className={`block font-display text-[clamp(1.35rem,2.1vw,1.85rem)] font-light leading-tight transition-colors duration-300 ease-premium ${isActive ? "text-brand-green" : "text-brand-navy"}`}
-    >{item.title}</span><span
-      className={`mt-1 block h-px origin-left bg-brand-fresh transition-transform duration-500 ease-premium ${isActive ? "scale-x-100" : "scale-x-0"}`}
-      aria-hidden="true"
-    /></span><span
-      className={`shrink-0 text-xs uppercase tracking-label transition-opacity duration-300 ease-premium ${isActive ? "text-brand-green opacity-100" : "opacity-0"}`}
-    >{item.subtitle}</span></button></li>;
-  })}</ul><div className="relative"><div className="sticky top-32"><div className="relative aspect-[4/4.4] w-full overflow-hidden rounded-[2.5rem] bg-white"><AnimatePresence mode="sync"><motion.img
-    key={current.image}
-    src={current.image}
-    alt={current.title}
-    className="absolute inset-0 h-full w-full object-cover"
-    initial={{ opacity: 0, scale: 1.04 }}
-    animate={{ opacity: 1, scale: 1 }}
-    exit={{ opacity: 0 }}
-    transition={{ duration: 0.6, ease: EASE }}
-  /></AnimatePresence><div
-    className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-brand-navy/85 to-transparent"
-    aria-hidden="true"
-  /><div className="absolute inset-x-0 bottom-0 p-8"><AnimatePresence mode="wait"><motion.div
-    key={current.number}
-    initial={{ opacity: 0, x: 24 }}
-    animate={{ opacity: 1, x: 0 }}
-    exit={{ opacity: 0, x: -16 }}
-    transition={{ duration: 0.45, ease: EASE }}
-  ><p className="font-display text-5xl font-light leading-none text-white/45">{current.number}</p><p className="mt-4 text-[11px] uppercase tracking-label text-brand-fresh">{current.subtitle}</p><p className="mt-3 max-w-md text-[15px] leading-relaxed text-white/85">{current.description}</p><SiteLink
-    to={`/specialities/${current.slug}`}
-    className="group mt-6 inline-flex items-center gap-2 text-sm font-medium text-white"
-  >
-                        
-                        Explore Service
-                        <ArrowRightIcon
-    className="h-4 w-4 transition-transform duration-200 ease-premium group-hover:translate-x-[5px]"
-    aria-hidden="true"
-  /></SiteLink></motion.div></AnimatePresence></div></div></div></div></div>{
-    /* Mobile / tablet: accordion */
-  }<ul className="mt-12 border-t border-brand-navy/10 lg:hidden">{specialities.map((item, i) => {
-    const isOpen = i === openMobile;
-    return <li key={item.title} className="border-b border-brand-navy/10"><button
-      type="button"
-      onClick={() => setOpenMobile(isOpen ? -1 : i)}
-      aria-expanded={isOpen}
-      className="flex w-full items-center gap-4 py-5 text-left"
-    ><span className="w-7 shrink-0 font-display text-xs text-ink-muted/60">{item.number}</span><span
-      className={`flex-1 font-display text-xl font-light leading-snug ${isOpen ? "text-brand-green" : "text-brand-navy"}`}
-    >{item.title}</span><ChevronDownIcon
-      className={`h-4 w-4 shrink-0 text-brand-green transition-transform duration-300 ease-premium ${isOpen ? "rotate-180" : ""}`}
-      aria-hidden="true"
-    /></button><AnimatePresence initial={false}>{isOpen && <motion.div
-      initial={{ height: 0, opacity: 0 }}
-      animate={{ height: "auto", opacity: 1 }}
-      exit={{ height: 0, opacity: 0 }}
-      transition={{ duration: 0.3, ease: EASE }}
-      className="overflow-hidden"
-    ><div className="pb-7 pl-11"><div className="aspect-[16/10] w-full overflow-hidden rounded-3xl bg-white"><img
-      src={item.image}
-      alt={item.title}
-      loading="lazy"
-      className="h-full w-full object-cover"
-    /></div><p className="mt-4 text-[11px] uppercase tracking-label text-brand-green">{item.subtitle}</p><p className="mt-2 text-[15px] leading-relaxed text-ink-soft">{item.description}</p><SiteLink
-      to={`/specialities/${item.slug}`}
-      className="group mt-4 inline-flex items-center gap-2 text-sm font-medium text-brand-green"
-    >
-                        
-                          Explore Service
-                          <ArrowRightIcon
-      className="h-4 w-4 transition-transform duration-200 ease-premium group-hover:translate-x-[5px]"
-      aria-hidden="true"
-    /></SiteLink></div></motion.div>}</AnimatePresence></li>;
-  })}</ul></div></section>;
+function Specialities({ directory = false }) {
+  const Heading = directory ? "h1" : "h2";
+  const CardHeading = directory ? "h2" : "h3";
+  return <section id="specialities" className={`bg-brand-mint ${directory ? "pt-40 pb-24 lg:pt-48" : "py-20 lg:py-28"}`}>
+    <div className="mx-auto max-w-[1400px] px-6 md:px-8">
+      {directory && <nav aria-label="Breadcrumb" className="mb-8 text-sm text-ink-soft"><SiteLink to="/" className="hover:text-brand-green">Home</SiteLink><span aria-hidden="true"> / </span><span aria-current="page">Specialities</span></nav>}
+      <div className="flex flex-col justify-between gap-6 lg:flex-row lg:items-end">
+        <div className="max-w-2xl"><SectionLabel>Our medical specialities</SectionLabel><Heading className="mt-5 font-display text-[clamp(2.25rem,4.5vw,3.75rem)] font-medium leading-tight tracking-tight text-brand-navy">Specialist care.<br /><span className="text-brand-green">Centred around you.</span></Heading></div>
+        <p className="max-w-md text-base leading-relaxed text-ink-soft">Find the right department for your needs. Explore our specialities and learn what to expect from your consultation.</p>
+      </div>
+      <div className="mt-12 grid gap-6 sm:grid-cols-2 xl:grid-cols-4">
+        {specialities.map((item) => <article key={item.slug} className="group flex min-w-0 flex-col overflow-hidden rounded-2xl border border-brand-green/10 bg-white transition-shadow hover:shadow-lg">
+          <SiteLink to={`/specialities/${item.slug}`} className="block overflow-hidden" aria-label={`Explore ${item.title}`}><img src={item.image} alt={item.imageAlt} width="480" height="400" loading="lazy" decoding="async" className="aspect-[6/5] w-full object-cover transition-transform duration-300 motion-safe:group-hover:scale-105" /></SiteLink>
+          <div className="flex flex-1 flex-col p-6"><p className="text-[10px] font-semibold uppercase tracking-widest text-brand-green">Department {item.number}</p><CardHeading className="mt-3 font-display text-xl font-medium leading-snug text-brand-navy">{item.title}</CardHeading><p className="mt-3 text-sm leading-relaxed text-ink-soft">{item.description}</p><SiteLink to={`/specialities/${item.slug}`} className="mt-auto inline-flex items-center gap-2 pt-6 text-sm font-semibold text-brand-green">Explore speciality<ArrowRightIcon className="h-4 w-4" aria-hidden="true" /></SiteLink></div>
+        </article>)}
+      </div>
+      <div className="mt-10 flex flex-wrap items-center justify-between gap-5 border-t border-brand-green/15 pt-7"><p className="text-sm text-ink-soft">Unsure which speciality to choose? Our care team can guide you.</p><SiteLink to="/contact" className="inline-flex items-center gap-3 rounded-full bg-brand-green px-6 py-3.5 text-sm font-semibold text-white transition hover:bg-brand-green-dark">Request an appointment<ArrowRightIcon className="h-4 w-4" aria-hidden="true" /></SiteLink></div>
+    </div>
+  </section>;
 }
-export {
-  Specialities
-};
+export { Specialities };

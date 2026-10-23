@@ -39,7 +39,7 @@ import { Reveal } from "../components/Reveal";
 import { SiteLink } from "../components/SiteLink";
 import { affiliations, blogPosts, careStages, company, doctor, faqs, gallery, treatments } from "../data/content";
 import { patientGuides } from "../data/patientGuide";
-import { specialities } from "../data/specialities";
+import { specialities, legacySpecialities } from "../data/specialities";
 
 const iconSet = [HeartHandshakeIcon, SparklesIcon, AwardIcon, ShieldCheckIcon, TargetIcon, StethoscopeIcon, UsersIcon, Building2Icon, CheckIcon];
 
@@ -99,11 +99,11 @@ function TreatmentsPage() {
 
 function SpecialityPage({ pathname }) {
   const slug = pathname.split("/").filter(Boolean).pop();
-  const speciality = specialities.find((item) => item.slug === slug);
+  const speciality = [...specialities, ...legacySpecialities].find((item) => item.slug === slug);
   if (!speciality) return <NotFoundPage />;
   const related = specialities.filter((item) => item.slug !== speciality.slug).slice(0, 3);
   return <>
-    <PageHero eyebrow="Women's Health Speciality" title={speciality.title} lead={speciality.description} image={speciality.image} imageAlt={`${speciality.title} consultation`}>
+    <PageHero eyebrow="Medical Speciality" title={speciality.title} lead={speciality.description} image={speciality.image} imageAlt={speciality.imageAlt || `${speciality.title} consultation`}>
       <p className="font-mono text-xs uppercase tracking-label text-brand-green">{speciality.subtitle}</p>
     </PageHero>
     <section className="bg-white py-24 lg:py-32"><div className="mx-auto grid max-w-[1400px] gap-14 px-6 md:px-8 lg:grid-cols-[.8fr_1.2fr] lg:gap-24"><SectionHeading eyebrow="Care Overview" title="Focused guidance, shaped around the individual." copy={speciality.overview} /><Reveal delay={.1}><div className="rounded-[2rem] bg-brand-mint p-8 md:p-10"><p className="font-mono text-[10px] uppercase tracking-label text-brand-green">When a consultation may help</p><ul className="mt-7 space-y-4">{speciality.concerns.map((item) => <li key={item} className="flex gap-3 text-sm leading-relaxed text-ink-soft"><CheckIcon className="mt-0.5 h-5 w-5 shrink-0 text-brand-green" />{item}</li>)}</ul></div></Reveal></div></section>
@@ -154,7 +154,7 @@ function BlogsPage() {
   const posts = category === "All" ? blogPosts : blogPosts.filter((post) => post.category === category);
   return <><PageHero eyebrow="Health Insights" title="Clear guidance for informed health decisions." lead="Explore approachable health education across pregnancy, women's health and fertility." />
     <EditorialPromiseSection />
-    <section className="bg-white py-24"><div className="mx-auto max-w-[1400px] px-6 md:px-8"><div className="flex flex-wrap gap-2">{categories.map((item) => <button key={item} type="button" onClick={() => setCategory(item)} className={`rounded-full px-5 py-3 text-sm transition ${category === item ? "bg-brand-green text-white" : "bg-brand-cream text-ink-soft hover:text-brand-green"}`}>{item}</button>)}</div><div className="mt-12 grid gap-8 md:grid-cols-3">{posts.map((post, index) => <Reveal key={post.title} delay={index * .07}><article className="group h-full"><div className="aspect-[4/3] overflow-hidden rounded-[1.75rem] bg-brand-mint"><img src={post.image} alt="Women's health editorial" loading="lazy" decoding="async" className="h-full w-full object-cover transition duration-500 group-hover:scale-105" /></div><p className="mt-6 font-mono text-[9px] uppercase tracking-label text-brand-green">{post.category} <span className="mx-2 text-brand-navy/25">•</span> {post.readTime}</p><h2 className="mt-3 font-display text-2xl font-medium leading-snug text-brand-navy">{post.title}</h2><p className="mt-3 text-sm leading-relaxed text-ink-soft">{post.excerpt}</p><span className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-ink-muted">{post.date}<ArrowRightIcon className="h-4 w-4" /></span></article></Reveal>)}</div></div></section>
+    <section className="bg-white py-24"><div className="mx-auto max-w-[1400px] px-6 md:px-8"><div className="flex flex-wrap gap-2">{categories.map((item) => <button key={item} type="button" onClick={() => setCategory(item)} className={`rounded-full px-5 py-3 text-sm transition ${category === item ? "bg-brand-green text-white" : "bg-brand-cream text-ink-soft hover:text-brand-green"}`}>{item}</button>)}</div><div className="mt-12 grid gap-8 md:grid-cols-3">{posts.map((post, index) => <Reveal key={post.title} delay={index * .07}><article className="group h-full"><div className="aspect-[4/3] overflow-hidden rounded-[1.75rem] bg-brand-mint"><img src={post.image} alt="Women's health editorial" loading="lazy" decoding="async" className="h-full w-full object-cover transition duration-500 group-hover:scale-105" /></div><p className="mt-6 font-mono text-[9px] uppercase tracking-label text-brand-green">{post.category} <span className="mx-2 text-brand-navy/25">â€¢</span> {post.readTime}</p><h2 className="mt-3 font-display text-2xl font-medium leading-snug text-brand-navy">{post.title}</h2><p className="mt-3 text-sm leading-relaxed text-ink-soft">{post.excerpt}</p><span className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-ink-muted">{post.date}<ArrowRightIcon className="h-4 w-4" /></span></article></Reveal>)}</div></div></section>
     <ReadingPathSection />
   </>;
 }
