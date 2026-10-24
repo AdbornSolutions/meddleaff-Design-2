@@ -22,13 +22,13 @@ function FinalCTA() {
             Take the first step towards better health with Meddleaff Healthcare.
           </p></Reveal><Reveal delay={0.2}><div className="mt-11 flex flex-wrap items-center justify-center gap-3"><SiteLink
     to="/contact"
-    className="inline-flex items-center rounded-full bg-white px-8 py-4 text-sm font-medium text-brand-navy transition-colors duration-200 ease-premium hover:bg-brand-background"
+    className="button-3d inline-flex items-center rounded-full bg-white px-8 py-4 text-sm font-medium text-brand-navy transition-colors duration-200 ease-premium hover:bg-brand-background"
   >
               
               Book an Appointment
             </SiteLink><SiteLink
     to="/patient-corner/queries"
-    className="group inline-flex items-center gap-2 rounded-full border border-white/25 px-8 py-4 text-sm font-medium text-white transition-colors duration-200 ease-premium hover:border-white/60"
+    className="button-3d button-white query-button-soft group inline-flex items-center gap-2 rounded-full border border-white/25 px-8 py-4 text-sm font-medium text-white transition-colors duration-200 ease-premium hover:border-white/60"
   >
               
               Share a Query

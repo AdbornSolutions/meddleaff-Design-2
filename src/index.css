@@ -29,7 +29,7 @@ body {
   scrollbar-width: none;
 }
 *:focus-visible {
-  outline: 2px solid #1d4ed8;
+  outline: 2px solid #162B46;
   outline-offset: 3px;
 }
 a,
@@ -59,4 +59,110 @@ section[id] {
     animation: none;
     stroke-dashoffset: 0;
   }
+}
+
+/* Raised action buttons */
+.button-3d.button-3d {
+  background-color: #1D4ED8;
+  color: #FFFFFF;
+  border: 1px solid #1D4ED8;
+  box-shadow: 0 4px 0 #153A9F, 0 9px 18px rgba(29, 78, 216, 0.24), inset 0 1px 0 rgba(255, 255, 255, 0.22);
+  transition: background-color 180ms ease, transform 180ms ease, box-shadow 180ms ease;
+}
+@media (hover: hover) {
+  .button-3d.button-3d:hover {
+    background-color: #1E40AF;
+    color: #FFFFFF;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 0 #153A9F, 0 13px 24px rgba(29, 78, 216, 0.28), inset 0 1px 0 rgba(255, 255, 255, 0.22);
+  }
+}
+.button-3d.button-3d:active {
+  transform: translateY(3px);
+  box-shadow: 0 1px 0 #153A9F, 0 3px 8px rgba(29, 78, 216, 0.2);
+}
+.button-3d.button-3d:disabled {
+  opacity: 0.6;
+  transform: none;
+  box-shadow: none;
+  cursor: not-allowed;
+}
+@media (prefers-reduced-motion: reduce) {
+  .button-3d.button-3d { transition: none; }
+  .button-3d.button-3d:hover, .button-3d.button-3d:active { transform: none; }
+}
+
+.button-3d.button-white {
+  background-color: #FFFFFF;
+  color: #1D4ED8;
+  border-color: #1D4ED8;
+  box-shadow: 0 4px 0 #CBDCF3, 0 9px 18px rgba(22, 43, 70, 0.14), inset 0 1px 0 #FFFFFF;
+}
+@media (hover: hover) {
+  .button-3d.button-white:hover {
+    background-color: #EFF8FF;
+    color: #1D4ED8;
+    box-shadow: 0 6px 0 #CBDCF3, 0 13px 24px rgba(22, 43, 70, 0.18), inset 0 1px 0 #FFFFFF;
+  }
+}
+.button-3d.button-white:active {
+  box-shadow: 0 1px 0 #CBDCF3, 0 3px 8px rgba(22, 43, 70, 0.12);
+}
+
+/* Consistent spacing between page sections on all screen sizes. */
+.site-shell > section,
+.site-shell > main > section {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+/* Raised service cards on the homepage. */
+.service-card-3d {
+  border-color: #d6e4f3;
+  background: linear-gradient(155deg, #ffffff 65%, #f5faff 100%);
+  box-shadow: 0 5px 0 #d5e2f0, 0 12px 24px -8px rgba(22, 43, 70, 0.18), inset 0 2px 0 #ffffff;
+  transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease, background-color 220ms ease;
+}
+@media (hover: hover) {
+  .service-card-3d:hover {
+    transform: translateY(-6px);
+    border-color: #adc7e8;
+    box-shadow: 0 7px 0 #cfdfef, 0 22px 34px -10px rgba(22, 43, 70, 0.24), inset 0 2px 0 #ffffff;
+  }
+}
+.service-card-3d:focus-within {
+  border-color: #1D4ED8;
+  box-shadow: 0 5px 0 #c4d6ed, 0 16px 28px -8px rgba(22, 43, 70, 0.22), inset 0 2px 0 #ffffff;
+}
+@media (prefers-reduced-motion: reduce) {
+  .service-card-3d { transition: none; }
+  .service-card-3d:hover { transform: none; }
+}
+
+@media (hover: hover) {
+  .service-card-3d:hover {
+    background: #16233c;
+    border-color: #16233c;
+    box-shadow: 0 7px 0 #0d1729, 0 22px 34px -10px rgba(22, 35, 60, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.12);
+  }
+  .service-card-3d:hover :is(h2, h3, a, svg) { color: #ffffff; }
+  .service-card-3d:hover p { color: #dbe7f5; }
+  .service-card-3d:hover a:hover { color: #93c5fd; }
+}
+
+/* Join the final appointment section directly to the footer. */
+.site-shell > main > #contact {
+  margin-bottom: 0;
+}
+
+.button-3d.button-white.query-button-soft {
+  box-shadow: 0 3px 0 rgba(203, 220, 243, 0.3), 0 7px 14px rgba(22, 43, 70, 0.07);
+}
+@media (hover: hover) {
+  .button-3d.button-white.query-button-soft:hover {
+    box-shadow: 0 4px 0 rgba(203, 220, 243, 0.35), 0 10px 18px rgba(22, 43, 70, 0.09);
+  }
+}
+.button-3d.button-white.query-button-soft:active {
+  box-shadow: 0 1px 0 rgba(203, 220, 243, 0.25);
 }

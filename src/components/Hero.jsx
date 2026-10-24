@@ -7,7 +7,7 @@ const headingLines = [
   <>Healthcare</>,
   <>That Cares</>,
   <>
-    Beyond <span className="text-brand-blue">Treatment.</span></>
+    Beyond <span className="text-[#008C74] font-[400]">Treatment.</span></>
 ];
 const pillars = ["9 Medical Departments", "Open 24×7", "Nagpur"];
 const floatingCards = [
@@ -16,7 +16,7 @@ const floatingCards = [
   { big: "Clear", small: "Clinical Guidance", position: "left-6 bottom-[8%]", delay: 2.4 }
 ];
 function Hero() {
-  return <section id="home" className="relative w-full overflow-hidden bg-brand-background"><div className="mx-auto grid max-w-[1400px] items-center gap-14 px-6 pb-20 pt-36 md:px-8 lg:grid-cols-[1.05fr_1fr] lg:gap-8 lg:pb-28 lg:pt-44">{
+  return <section id="home" className="relative w-full overflow-hidden bg-brand-background"><div className="mx-auto grid max-w-[1400px] items-center gap-14 px-6 pb-[40px] pt-36 md:px-8 lg:grid-cols-[1.05fr_1fr] lg:gap-8 pb-[40px] lg:pt-44">{
     /* Left */
   }<div className="relative z-10"><motion.p
     initial={{ opacity: 0, y: 16 }}
@@ -51,13 +51,13 @@ function Hero() {
     className="mt-10 flex flex-wrap items-center gap-3"
   ><a
     href="#contact"
-    className="inline-flex items-center rounded-full bg-brand-blue px-8 py-4 text-sm font-medium text-white transition-colors duration-200 ease-premium hover:bg-brand-blue-dark"
+    className="button-3d inline-flex items-center rounded-full bg-brand-blue px-8 py-4 text-sm font-medium text-white transition-colors duration-200 ease-premium hover:bg-brand-blue-dark"
   >
               
               Book an Appointment
             </a><a
     href="#specialities"
-    className="group inline-flex items-center gap-2 rounded-full border border-brand-navy/15 px-8 py-4 text-sm font-medium text-brand-navy transition-colors duration-200 ease-premium hover:border-brand-blue hover:text-brand-blue"
+    className="button-3d button-white group inline-flex items-center gap-2 rounded-full border border-brand-navy/15 px-8 py-4 text-sm font-medium text-brand-navy transition-colors duration-200 ease-premium hover:border-brand-blue hover:text-brand-blue"
   >
               
               Explore Our Specialities

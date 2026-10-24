@@ -1,7 +1,7 @@
 import { Reveal, SectionLabel } from "./Reveal";
 import { journeySteps } from "../data/site";
 function Journey() {
-  return <section aria-labelledby="journey-heading" className="w-full bg-white py-24 lg:py-32"><div className="mx-auto max-w-[1400px] px-6 md:px-8"><div className="max-w-2xl"><Reveal><SectionLabel>Your Healthcare Journey</SectionLabel></Reveal><Reveal delay={0.08}><h2
+  return <section aria-labelledby="journey-heading" className="w-full bg-white py-[40px]"><div className="mx-auto max-w-[1400px] px-6 md:px-8"><div className="max-w-2xl"><Reveal><SectionLabel>Your Healthcare Journey</SectionLabel></Reveal><Reveal delay={0.08}><h2
     id="journey-heading"
     className="mt-6 font-display text-[clamp(2.25rem,4.2vw,3.5rem)] font-light leading-[1.04] tracking-[-0.02em] text-brand-navy"
   >

@@ -9,7 +9,6 @@ import { Facilities } from "./components/Facilities";
 import { Doctors } from "./components/Doctors";
 import { PatientExperience } from "./components/PatientExperience";
 import { Journey } from "./components/Journey";
-import { Testimonials } from "./components/Testimonials";
 import { Insights } from "./components/Insights";
 import { FinalCTA } from "./components/FinalCTA";
 import { Footer } from "./components/Footer";
@@ -28,7 +27,7 @@ import {
   TreatmentsPage
 } from "./pages/SitePages";
 function HomePage() {
-  return <main><Hero /><TrustStrip /><About /><Specialities /><EmergencyBanner /><WhyChooseUs /><Facilities /><Doctors /><PatientExperience /><Journey /><Testimonials /><Insights /><FinalCTA /></main>;
+  return <main><Hero /><TrustStrip /><About /><Specialities /><EmergencyBanner /><WhyChooseUs /><Facilities /><Doctors /><PatientExperience /><Journey /><Insights /><FinalCTA /></main>;
 }
 function App() {
   const pathname = usePathname().replace(/\/+$/, "") || "/";
@@ -61,7 +60,7 @@ function App() {
   else if (pathname.startsWith("/patient-guide/")) page = <PatientGuidePage pathname={pathname} />;
   else if (pathname === "/patient-corner" || pathname.startsWith("/patient-corner/")) page = <PatientCornerPage pathname={pathname} />;
   else page = <NotFoundPage />;
-  return <div className="min-h-screen w-full bg-brand-background"><Header pathname={pathname} />{page}<Footer /></div>;
+  return <div className="site-shell min-h-screen w-full bg-brand-background"><Header pathname={pathname} />{page}<Footer /></div>;
 }
 export {
   App

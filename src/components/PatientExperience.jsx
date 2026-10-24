@@ -1,7 +1,7 @@
 import { Reveal, ImageReveal, SectionLabel } from "./Reveal";
 const IMG = "/1c302445-34ec-4967-b16f-a2aaac000d6f.jpg";
 function PatientExperience() {
-  return <section aria-labelledby="experience-heading" className="w-full bg-brand-background py-24 lg:py-32"><div className="mx-auto max-w-[1400px] px-6 md:px-8"><ImageReveal
+  return <section aria-labelledby="experience-heading" className="w-full bg-brand-background py-[40px]"><div className="mx-auto max-w-[1400px] px-6 md:px-8"><ImageReveal
     src={IMG}
     alt="A doctor leaning forward, listening to a couple in a sunlit consultation lounge"
     className="aspect-[16/10] w-full rounded-[2.5rem] bg-white lg:aspect-[21/9]"

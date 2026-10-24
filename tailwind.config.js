@@ -6,8 +6,8 @@ export default {content: [
     extend: {
       colors: {
         brand: {
-          blue: '#1D4ED8',
-          'blue-dark': '#1E40AF',
+          blue: '#162B46',
+          'blue-dark': '#102035',
           sky: '#2563EB',
           navy: '#16233C',
           background: '#EFF8FF',

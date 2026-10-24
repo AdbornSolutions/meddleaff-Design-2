@@ -9,7 +9,7 @@ const scrim = <div
 />;
 function Facilities() {
   const [consult, diagnostics, equipment, emergency] = facilities;
-  return <section id="facilities" className="w-full bg-white py-24 lg:py-32"><div className="mx-auto max-w-[1400px] px-6 md:px-8"><div className="max-w-3xl"><Reveal><SectionLabel>Our Facilities</SectionLabel></Reveal><Reveal delay={0.08}><h2 className="mt-6 font-display text-[clamp(2.25rem,4.4vw,3.85rem)] font-light leading-[1.04] tracking-[-0.02em] text-brand-navy">
+  return <section id="facilities" className="w-full bg-white py-[40px]"><div className="mx-auto max-w-[1400px] px-6 md:px-8"><div className="max-w-3xl"><Reveal><SectionLabel>Our Facilities</SectionLabel></Reveal><Reveal delay={0.08}><h2 className="mt-6 font-display text-[clamp(2.25rem,4.4vw,3.85rem)] font-light leading-[1.04] tracking-[-0.02em] text-brand-navy">
               Designed for Better
               <br /><span className="text-brand-blue">Healthcare Experiences.</span></h2></Reveal></div><div className="mt-16 grid gap-4 lg:grid-cols-4 lg:grid-rows-2"><div className="relative overflow-hidden rounded-[2rem] bg-brand-background lg:col-span-2 lg:row-span-2"><ImageReveal
     src={facilityCentre.image}

@@ -8,7 +8,7 @@ const IMG_CONSULT = "/c69548f5-2001-4af7-8be6-86387ea9f2ef.jpg";
 const IMG_INTERIOR = "/65b82f2e-0b60-480c-9116-37df5f9fe003.jpg";
 const IMG_CARE = "/16aa1c22-ef26-409e-9c2b-d841f5ef0773.jpg";
 function About() {
-  return <section id="about" className="w-full bg-white py-24 lg:py-32"><div className="mx-auto grid max-w-[1400px] items-center gap-16 px-6 md:px-8 lg:grid-cols-[1fr_0.9fr] lg:gap-24">{
+  return <section id="about" className="w-full bg-white pt-[40px] pb-[40px]"><div className="mx-auto grid max-w-[1400px] items-center gap-16 px-6 md:px-8 lg:grid-cols-[1fr_0.9fr] lg:gap-24">{
     /* Editorial image cluster */
   }<div className="relative"><div className="grid grid-cols-5 gap-4"><ImageReveal
     src={IMG_CONSULT}
@@ -26,7 +26,7 @@ function About() {
     delay={0.24}
   /></div></div><Reveal
     delay={0.35}
-    className="absolute -bottom-8 left-6 hidden rounded-2xl bg-brand-blue px-7 py-6 text-white shadow-[0_20px_50px_-24px_rgba(29,78,216,0.6)] lg:block"
+    className="absolute bottom-[-22px] left-6 hidden rounded-2xl bg-brand-blue px-7 py-6 text-white shadow-[0_20px_50px_-24px_rgba(22,43,70,0.6)] lg:block"
   ><p className="font-display text-3xl font-light leading-none">{specialities.length}</p><p className="mt-2 text-[11px] uppercase tracking-label text-white/70">
               Medical specialities
             </p></Reveal></div>{

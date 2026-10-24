@@ -3,7 +3,7 @@ import { Reveal, SectionLabel } from "./Reveal";
 import { insights } from "../data/insights";
 import { SiteLink } from "./SiteLink";
 function Insights() {
-  return <section id="insights" aria-labelledby="insights-heading" className="w-full bg-white py-24 lg:py-32"><div className="mx-auto max-w-[1400px] px-6 md:px-8"><div className="flex flex-wrap items-end justify-between gap-8"><div className="max-w-2xl"><Reveal><SectionLabel>Health Insights</SectionLabel></Reveal><Reveal delay={0.08}><h2
+  return <section id="insights" aria-labelledby="insights-heading" className="w-full bg-white py-[40px]"><div className="mx-auto max-w-[1400px] px-6 md:px-8"><div className="flex flex-wrap items-end justify-between gap-8"><div className="max-w-2xl"><Reveal><SectionLabel>Health Insights</SectionLabel></Reveal><Reveal delay={0.08}><h2
     id="insights-heading"
     className="mt-6 font-display text-[clamp(2.25rem,4.4vw,3.85rem)] font-light leading-[1.04] tracking-[-0.02em] text-brand-navy"
   >

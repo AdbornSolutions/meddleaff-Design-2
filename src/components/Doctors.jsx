@@ -5,7 +5,7 @@ import { SiteLink } from "./SiteLink";
 
 function Doctors() {
   return (
-    <section id="doctors" className="w-full bg-white py-24 lg:py-32">
+    <section id="doctors" className="w-full bg-white py-[40px]">
       <div className="mx-auto max-w-[1400px] px-6 md:px-8">
         <div className="grid overflow-hidden rounded-[2rem] bg-brand-background lg:grid-cols-[0.9fr_1.1fr] lg:rounded-[3rem]">
           <Reveal className="relative min-h-[460px] overflow-hidden sm:min-h-[560px] lg:min-h-[720px]">
@@ -68,14 +68,14 @@ function Doctors() {
               <Reveal delay={0.24} className="mt-9 flex flex-wrap gap-3">
                 <SiteLink
                   to="/doctor-profile"
-                  className="group inline-flex items-center gap-2 rounded-full bg-brand-navy px-6 py-3.5 text-sm font-semibold text-white transition-colors duration-200 hover:bg-brand-blue"
+                  className="button-3d group inline-flex items-center gap-2 rounded-full bg-brand-navy px-6 py-3.5 text-sm font-semibold text-white transition-colors duration-200 hover:bg-brand-blue"
                 >
                   View Full Profile
                   <ArrowRightIcon className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" aria-hidden="true" />
                 </SiteLink>
                 <SiteLink
                   to="/contact"
-                  className="inline-flex items-center rounded-full border border-brand-navy/15 px-6 py-3.5 text-sm font-semibold text-brand-navy transition-colors duration-200 hover:border-brand-blue hover:text-brand-blue"
+                  className="button-3d button-white inline-flex items-center rounded-full border border-brand-navy/15 px-6 py-3.5 text-sm font-semibold text-brand-navy transition-colors duration-200 hover:border-brand-blue hover:text-brand-blue"
                 >
                   Book a Consultation
                 </SiteLink>

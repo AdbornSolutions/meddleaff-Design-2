@@ -1,7 +1,7 @@
 import { Reveal, SectionLabel } from "./Reveal";
 import { whyChooseUs } from "../data/site";
 function WhyChooseUs() {
-  return <section aria-labelledby="why-heading" className="w-full bg-brand-background py-24 lg:py-32"><div className="mx-auto max-w-[1400px] px-6 md:px-8"><div className="grid gap-8 lg:grid-cols-[0.95fr_1fr] lg:items-end"><div><Reveal><SectionLabel>Why Meddleaff</SectionLabel></Reveal><Reveal delay={0.08}><h2
+  return <section aria-labelledby="why-heading" className="w-full bg-brand-background py-[40px]"><div className="mx-auto max-w-[1400px] px-6 md:px-8"><div className="grid gap-8 lg:grid-cols-[0.95fr_1fr] lg:items-end"><div><Reveal><SectionLabel>Why Meddleaff</SectionLabel></Reveal><Reveal delay={0.08}><h2
     id="why-heading"
     className="mt-6 font-display text-[clamp(2.25rem,4.4vw,3.85rem)] font-light leading-[1.04] tracking-[-0.02em] text-brand-navy"
   >
