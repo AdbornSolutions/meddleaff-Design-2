@@ -16,7 +16,7 @@ const floatingCards = [
   { big: "Clear", small: "Clinical Guidance", position: "left-6 bottom-[8%]", delay: 2.4 }
 ];
 function Hero() {
-  return <section id="home" className="relative w-full overflow-hidden bg-brand-white"><div className="mx-auto grid max-w-[1400px] items-center gap-14 px-6 pb-20 pt-36 md:px-8 lg:grid-cols-[1.05fr_1fr] lg:gap-8 lg:pb-28 lg:pt-44">{
+  return <section id="home" className="relative w-full overflow-hidden bg-brand-background"><div className="mx-auto grid max-w-[1400px] items-center gap-14 px-6 pb-20 pt-36 md:px-8 lg:grid-cols-[1.05fr_1fr] lg:gap-8 lg:pb-28 lg:pt-44">{
     /* Left */
   }<div className="relative z-10"><motion.p
     initial={{ opacity: 0, y: 16 }}
@@ -80,7 +80,7 @@ function Hero() {
     initial={{ opacity: 0 }}
     animate={{ opacity: 1 }}
     transition={{ duration: 1, ease: EASE, delay: 0.2 }}
-    className="organic-hero-mask relative aspect-[4/5] w-full overflow-hidden bg-brand-white lg:aspect-[4/4.6]"
+    className="organic-hero-mask relative aspect-[4/5] w-full overflow-hidden bg-brand-background lg:aspect-[4/4.6]"
   ><motion.img
     src={HERO_IMAGE}
     alt="A doctor sitting with an elderly patient and her daughter in a bright hospital consultation lounge"

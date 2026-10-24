@@ -15,7 +15,7 @@ function Insights() {
       key={article.title}
       delay={i * 0.1}
       className="group flex h-full flex-col"
-    ><SiteLink to="/blogs" className="flex h-full flex-col"><div className="aspect-[4/3] overflow-hidden rounded-[1.75rem] bg-brand-white"><img
+    ><SiteLink to="/blogs" className="flex h-full flex-col"><div className="aspect-[4/3] overflow-hidden rounded-[1.75rem] bg-brand-background"><img
       src={article.image}
       alt={article.title}
       loading="lazy"

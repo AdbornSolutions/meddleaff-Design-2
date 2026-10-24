@@ -9,7 +9,7 @@ function VitalsLine({ className = "" }) {
 }
 
 function PageHero({ eyebrow, title, lead, image, imageAlt, children }) {
-  return <section className="relative overflow-hidden bg-brand-white pt-36 lg:pt-44">
+  return <section className="relative overflow-hidden bg-brand-background pt-36 lg:pt-44">
     <div className="pointer-events-none absolute inset-0" aria-hidden="true"><span className="animate-float-slow absolute -right-24 top-24 h-72 w-72 rounded-full bg-brand-blue/[.055] blur-2xl" /><span className="absolute -left-24 bottom-10 h-56 w-56 rounded-full border border-brand-blue/10" /></div>
     <div className={`relative mx-auto grid max-w-[1400px] items-center gap-12 px-6 pb-16 md:px-8 lg:pb-24 ${image ? "lg:grid-cols-[1.05fr_.85fr]" : ""}`}>
       <div className="max-w-4xl">
@@ -19,7 +19,7 @@ function PageHero({ eyebrow, title, lead, image, imageAlt, children }) {
         {children && <Reveal delay={0.2}><div className="mt-9">{children}</div></Reveal>}
       </div>
       {image && <Reveal delay={0.12} className="relative">
-        <div className="aspect-[4/4.7] overflow-hidden rounded-[2.5rem] bg-brand-white">
+        <div className="aspect-[4/4.7] overflow-hidden rounded-[2.5rem] bg-brand-background">
           <img src={image} alt={imageAlt} loading="eager" fetchPriority="high" decoding="async" className="h-full w-full object-cover" />
         </div>
       </Reveal>}
@@ -40,7 +40,7 @@ function ConsultationBand({ title = "Ready to speak with our care team?", copy =
   return <section className="bg-brand-navy py-20 text-white">
     <div className="mx-auto flex max-w-[1400px] flex-col items-start justify-between gap-8 px-6 md:px-8 lg:flex-row lg:items-center">
       <div className="max-w-3xl"><p className="font-mono text-[10px] uppercase tracking-label text-brand-ice">Consultation</p><h2 className="mt-4 font-display text-4xl font-medium md:text-5xl">{title}</h2><p className="mt-4 text-white/65">{copy}</p></div>
-      <SiteLink to="/contact" className="group inline-flex shrink-0 items-center gap-3 rounded-full bg-white px-7 py-4 text-sm font-semibold text-brand-navy transition hover:bg-brand-white">Book a Consultation <ArrowRightIcon className="h-4 w-4 transition-transform group-hover:translate-x-1" /></SiteLink>
+      <SiteLink to="/contact" className="group inline-flex shrink-0 items-center gap-3 rounded-full bg-white px-7 py-4 text-sm font-semibold text-brand-navy transition hover:bg-brand-background">Book a Consultation <ArrowRightIcon className="h-4 w-4 transition-transform group-hover:translate-x-1" /></SiteLink>
     </div>
   </section>;
 }

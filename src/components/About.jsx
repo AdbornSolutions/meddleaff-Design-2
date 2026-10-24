@@ -13,16 +13,16 @@ function About() {
   }<div className="relative"><div className="grid grid-cols-5 gap-4"><ImageReveal
     src={IMG_CONSULT}
     alt="A doctor listening attentively to a patient across a consultation desk"
-    className="col-span-3 aspect-[3/4] rounded-[2rem] bg-brand-white"
+    className="col-span-3 aspect-[3/4] rounded-[2rem] bg-brand-background"
   /><div className="col-span-2 flex flex-col gap-4 pt-10"><ImageReveal
     src={IMG_INTERIOR}
     alt="The bright, plant-filled atrium of Meddleaff Healthcare"
-    className="aspect-[4/5] rounded-[2rem] bg-brand-white"
+    className="aspect-[4/5] rounded-[2rem] bg-brand-background"
     delay={0.12}
   /><ImageReveal
     src={IMG_CARE}
     alt="A nurse gently holding an older patient's hand"
-    className="aspect-square rounded-[2rem] bg-brand-white"
+    className="aspect-square rounded-[2rem] bg-brand-background"
     delay={0.24}
   /></div></div><Reveal
     delay={0.35}
@@ -41,7 +41,7 @@ function About() {
       key={feature}
       delay={0.2 + i * 0.06}
       className="flex items-start gap-3 text-[15px] text-brand-navy"
-    ><span className="mt-0.5 grid h-5 w-5 shrink-0 place-items-center rounded-full bg-brand-white text-brand-blue"><CheckIcon className="h-3 w-3" strokeWidth={3} aria-hidden="true" /></span>{feature}</Reveal>
+    ><span className="mt-0.5 grid h-5 w-5 shrink-0 place-items-center rounded-full bg-brand-background text-brand-blue"><CheckIcon className="h-3 w-3" strokeWidth={3} aria-hidden="true" /></span>{feature}</Reveal>
   )}</ul><Reveal delay={0.45}><SiteLink
     to="/about"
     className="group mt-12 inline-flex items-center gap-2 border-b border-brand-navy/20 pb-2 text-sm font-medium text-brand-navy transition-colors duration-200 ease-premium hover:border-brand-blue hover:text-brand-blue"

@@ -7,7 +7,7 @@ function Doctors() {
   return (
     <section id="doctors" className="w-full bg-white py-24 lg:py-32">
       <div className="mx-auto max-w-[1400px] px-6 md:px-8">
-        <div className="grid overflow-hidden rounded-[2rem] bg-brand-white lg:grid-cols-[0.9fr_1.1fr] lg:rounded-[3rem]">
+        <div className="grid overflow-hidden rounded-[2rem] bg-brand-background lg:grid-cols-[0.9fr_1.1fr] lg:rounded-[3rem]">
           <Reveal className="relative min-h-[460px] overflow-hidden sm:min-h-[560px] lg:min-h-[720px]">
             <img
               src={doctor.image}

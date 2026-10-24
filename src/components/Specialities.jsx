@@ -21,7 +21,7 @@ const departmentIcons = {
 function Specialities({ directory = false }) {
   const Heading = directory ? "h1" : "h2";
   const CardHeading = directory ? "h2" : "h3";
-  return <section id="specialities" className={`bg-brand-white ${directory ? "pt-40 pb-24 lg:pt-48" : "py-20 lg:py-28"}`}>
+  return <section id="specialities" className={`bg-brand-background ${directory ? "pt-40 pb-24 lg:pt-48" : "py-20 lg:py-28"}`}>
     <div className="mx-auto max-w-[1400px] px-6 md:px-8">
       {directory && <nav aria-label="Breadcrumb" className="mb-8 text-sm text-ink-soft"><SiteLink to="/" className="hover:text-brand-blue">Home</SiteLink><span aria-hidden="true"> / </span><span aria-current="page">Specialities</span></nav>}
       <div className="flex flex-col justify-between gap-6 lg:flex-row lg:items-end">

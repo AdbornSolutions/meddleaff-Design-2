@@ -10,7 +10,7 @@ export default {content: [
           'blue-dark': '#1E40AF',
           sky: '#2563EB',
           navy: '#16233C',
-          white: '#FFFFFF',
+          background: '#EFF8FF',
           ice: '#93C5FD',
         },
         ink: {
