@@ -1,3 +1,13 @@
+import specialityHero1 from "../assessts/Specialities/Department of Obstetrics & Gynaecology.png";
+import specialityHero2 from "../assessts/Specialities/Department of Paediatrics.png";
+import specialityHero3 from "../assessts/Specialities/Department of General Surgery.png";
+import specialityHero4 from "../assessts/Specialities/Department of Medicine.png";
+import specialityHero5 from "../assessts/Specialities/Department of Cosmetology.png";
+import specialityHero6 from "../assessts/Specialities/Department of Endocrinology.png";
+import specialityHero7 from "../assessts/Specialities/Department of Preventive Health Care.png";
+import specialityHero8 from "../assessts/Specialities/Department of Pathology.png";
+import specialityHero9 from "../assessts/Specialities/Department of Radiology.png";
+
 const legacySpecialities = [
   {
     number: "01", slug: "pregnancy-antenatal-care", title: "Pregnancy & Antenatal Care", subtitle: "Support Through Every Trimester",
@@ -94,8 +104,8 @@ const specialities = [
       "Review of available reports and recommended next steps",
       "Guidance on preparation and follow-up"
     ],
-    "image": "/images/specialities/womens-health-reproductive-medicine.svg",
-    "imageAlt": "Medical illustration representing Obstetrics & Gynaecology"
+    "image": specialityHero1,
+    "imageAlt": "Department of Obstetrics & Gynaecology care"
   },
   {
     "number": "02",
@@ -115,8 +125,8 @@ const specialities = [
       "Review of available reports and recommended next steps",
       "Guidance on preparation and follow-up"
     ],
-    "image": "/images/specialities/paediatrics.svg",
-    "imageAlt": "Medical illustration representing Paediatrics"
+    "image": specialityHero2,
+    "imageAlt": "Department of Paediatrics care"
   },
   {
     "number": "03",
@@ -136,8 +146,8 @@ const specialities = [
       "Review of available reports and recommended next steps",
       "Guidance on preparation and follow-up"
     ],
-    "image": "/images/specialities/general-laparoscopic-surgery.svg",
-    "imageAlt": "Medical illustration representing General Surgery"
+    "image": specialityHero3,
+    "imageAlt": "Department of General Surgery care"
   },
   {
     "number": "04",
@@ -157,8 +167,8 @@ const specialities = [
       "Review of available reports and recommended next steps",
       "Guidance on preparation and follow-up"
     ],
-    "image": "/images/specialities/diabetology-rheumatology-internal-medicine.svg",
-    "imageAlt": "Medical illustration representing Medicine"
+    "image": specialityHero4,
+    "imageAlt": "Department of Medicine care"
   },
   {
     "number": "05",
@@ -178,8 +188,8 @@ const specialities = [
       "Review of available reports and recommended next steps",
       "Guidance on preparation and follow-up"
     ],
-    "image": "/images/specialities/cosmetology.svg",
-    "imageAlt": "Medical illustration representing Cosmetology"
+    "image": specialityHero5,
+    "imageAlt": "Department of Cosmetology care"
   },
   {
     "number": "06",
@@ -199,8 +209,8 @@ const specialities = [
       "Review of available reports and recommended next steps",
       "Guidance on preparation and follow-up"
     ],
-    "image": "/images/specialities/endocrinology.svg",
-    "imageAlt": "Medical illustration representing Endocrinology"
+    "image": specialityHero6,
+    "imageAlt": "Department of Endocrinology care"
   },
   {
     "number": "07",
@@ -220,8 +230,8 @@ const specialities = [
       "Review of available reports and recommended next steps",
       "Guidance on preparation and follow-up"
     ],
-    "image": "/images/specialities/preventive-health-care.svg",
-    "imageAlt": "Medical illustration representing Preventive Health Care"
+    "image": specialityHero7,
+    "imageAlt": "Department of Preventive Health Care care"
   },
   {
     "number": "08",
@@ -241,8 +251,8 @@ const specialities = [
       "Review of available reports and recommended next steps",
       "Guidance on preparation and follow-up"
     ],
-    "image": "/images/specialities/pathology.svg",
-    "imageAlt": "Medical illustration representing Pathology"
+    "image": specialityHero8,
+    "imageAlt": "Department of Pathology care"
   },
   {
     "number": "09",
@@ -262,8 +272,8 @@ const specialities = [
       "Review of available reports and recommended next steps",
       "Guidance on preparation and follow-up"
     ],
-    "image": "/images/specialities/radiology.svg",
-    "imageAlt": "Medical illustration representing Radiology"
+    "image": specialityHero9,
+    "imageAlt": "Department of Radiology care"
   }
 ];
 
