@@ -36,11 +36,11 @@ function SectionHeading({ eyebrow, title, copy, align = "left", tone = "dark" })
   </div>;
 }
 
-function ConsultationBand({ title = "Ready to speak with our care team?", copy = "Share your concern and our team will help you plan the next step." }) {
+function ConsultationBand({ buttonLabel = "Book a Consultation", title = "Ready to speak with our care team?", copy = "Share your concern and our team will help you plan the next step." }) {
   return <section className="bg-brand-navy py-[40px] text-white">
     <div className="mx-auto flex max-w-[1400px] flex-col items-start justify-between gap-8 px-6 md:px-8 lg:flex-row lg:items-center">
       <div className="max-w-3xl"><p className="font-mono text-[10px] uppercase tracking-label text-brand-ice">Consultation</p><h2 className="mt-4 font-display text-4xl font-medium md:text-5xl">{title}</h2><p className="mt-4 text-white/65">{copy}</p></div>
-      <SiteLink to="/contact" className="button-3d group inline-flex shrink-0 items-center gap-3 rounded-full bg-white px-7 py-4 text-sm font-semibold text-brand-navy transition hover:bg-brand-background">Book a Consultation <ArrowRightIcon className="h-4 w-4 transition-transform group-hover:translate-x-1" /></SiteLink>
+      <SiteLink to="/contact" className="button-3d group inline-flex shrink-0 items-center gap-3 rounded-full bg-white px-7 py-4 text-sm font-semibold text-brand-navy transition hover:bg-brand-background">{buttonLabel} <ArrowRightIcon className="h-4 w-4 transition-transform group-hover:translate-x-1" /></SiteLink>
     </div>
   </section>;
 }

@@ -1,3 +1,4 @@
+import { specialities } from "./data/specialities";
 import { Header } from "./components/Header";
 import { Hero } from "./components/Hero";
 import { TrustStrip } from "./components/TrustStrip";
@@ -44,7 +45,14 @@ function App() {
       "/contact": "Contact Us | Meddleaff Healthcare"
     };
     const sectionTitle = pathname.startsWith("/specialities/") ? "Speciality | Meddleaff Healthcare" : pathname.startsWith("/patient-guide/") ? "Patient Guide | Meddleaff Healthcare" : pathname.startsWith("/patient-corner") ? "Patient's Corner | Meddleaff Healthcare" : "Page Not Found | Meddleaff Healthcare";
-    document.title = titles[pathname] || sectionTitle;
+    const speciality = specialities.find((item) => pathname === `/specialities/${item.slug}` || item.aliases?.some((alias) => pathname === `/specialities/${alias}`));
+    document.title = speciality?.metaTitle || titles[pathname] || sectionTitle;
+    const description = document.querySelector('meta[name="description"]');
+    if (speciality?.metaDescription && description) {
+      const previous = description.content;
+      description.content = speciality.metaDescription;
+      return () => { description.content = previous; };
+    }
   }, [pathname]);
   let page;
   if (pathname === "/") page = <HomePage />;
