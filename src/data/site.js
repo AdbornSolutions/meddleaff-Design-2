@@ -4,6 +4,7 @@ const site = {
   tagline: "Compassionate Care. Advanced Healthcare. Better Lives.",
   kind: "Patient-centred healthcare",
   phones: ["8956730543"],
+  email: "meddleaff@gmail.com",
   address: "Prayag Paradise, Friend’s Colony, Nagpur 440013",
   operatingHours: "24×7",
   nav: [
