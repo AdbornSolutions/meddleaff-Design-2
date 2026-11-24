@@ -3,7 +3,7 @@ const site = {
   legalName: "MEDDLEAFF HEALTHCARE PVT LTD",
   tagline: "Compassionate Care. Advanced Healthcare. Better Lives.",
   kind: "Patient-centred healthcare",
-  phones: [],
+  phones: ["8956730543"],
   address: "Prayag Paradise, Friend’s Colony, Nagpur 440013",
   operatingHours: "24×7",
   nav: [
