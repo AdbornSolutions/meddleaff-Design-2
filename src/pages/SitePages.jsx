@@ -177,7 +177,7 @@ function InquiryForm({ compact = false, kind = "appointment" }) {
     const email = String(data.get("email") || "").trim();
     const message = String(data.get("message") || "").trim();
     if (name.length < 2) nextErrors.name = "Please enter your full name.";
-    if (!/^\+?[0-9\s()-]{7,18}$/.test(phone)) nextErrors.phone = "Please enter a valid phone number.";
+    if (!/^\+?[0-9\s()-]{7,18}$/.test(phone) || phone.replace(/\D/g, "").length < 7) nextErrors.phone = "Please enter a valid phone number.";
     if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) nextErrors.email = "Please enter a valid email address.";
     if (message.length < 10) nextErrors.message = "Please share a little more detail.";
     if (kind === "query" && data.get("consent") !== "on") nextErrors.consent = "Consent is required so the care team can respond.";
@@ -186,14 +186,14 @@ function InquiryForm({ compact = false, kind = "appointment" }) {
     if (data.get("website")) return;
     setStatus("submitting");
     try {
-      const endpoint = import.meta.env.VITE_CONTACT_ENDPOINT;
-      if (!endpoint) throw new Error("Contact endpoint is not configured");
+      const endpoint = import.meta.env.VITE_CONTACT_ENDPOINT || "/api/contact";
       const response = await fetch(endpoint, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ kind, name: name.slice(0, 100), phone: phone.slice(0, 30), email: email.slice(0, 160), message: message.slice(0, 2000), consent: data.get("consent") === "on" })
       });
       if (!response.ok) throw new Error(`Request failed with status ${response.status}`);
+      if (endpoint === "/api/contact" && (await response.json()).received !== true) throw new Error("Submission was not confirmed");
       form.reset();
       setStatus("success");
     } catch {
