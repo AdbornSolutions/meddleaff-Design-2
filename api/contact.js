@@ -29,8 +29,9 @@ export default async function contact(req, res) {
 
   const { APPS_SCRIPT_URL, APPS_SCRIPT_SECRET, RESEND_API_KEY, CONTACT_FROM_EMAIL } = process.env;
   if (APPS_SCRIPT_URL || APPS_SCRIPT_SECRET) {
-    if (!APPS_SCRIPT_SECRET) {
-      return res.status(503).json({ error: 'Lead storage is unavailable' });
+    if (!APPS_SCRIPT_SECRET?.trim() || /^https?:\/\//i.test(APPS_SCRIPT_SECRET.trim())) {
+      console.error('Contact configuration: APPS_SCRIPT_SECRET must contain the Apps Script CONTACT_SECRET value');
+      return res.status(503).json({ error: 'Lead storage is unavailable', code: 'CONTACT_CONFIG_INVALID' });
     }
 
     try {
@@ -40,14 +41,23 @@ export default async function contact(req, res) {
         signal: AbortSignal.timeout(25000),
         body: JSON.stringify({ kind, name, phone, email, message, consent, secret: APPS_SCRIPT_SECRET }),
       });
-      const result = response.ok ? await response.json() : null;
+      if (!response.ok) {
+        console.error('Contact storage: Apps Script HTTP status', response.status);
+        return res.status(502).json({ error: 'Lead storage failed', code: 'CONTACT_SCRIPT_HTTP_ERROR' });
+      }
+
+      const result = await response.json().catch(() => null);
       if (result?.saved === true) {
         return res.status(200).json({ received: true, sent: result.sent === true });
       }
-    } catch {
-      return res.status(502).json({ error: 'Lead storage failed' });
+      const code = result?.saved === false ? 'CONTACT_SCRIPT_REJECTED' : 'CONTACT_SCRIPT_BAD_RESPONSE';
+      console.error('Contact storage:', code);
+      return res.status(502).json({ error: 'Lead storage failed', code });
+    } catch (error) {
+      const code = error?.name === 'TimeoutError' ? 'CONTACT_SCRIPT_TIMEOUT' : 'CONTACT_SCRIPT_UNREACHABLE';
+      console.error('Contact storage:', code);
+      return res.status(502).json({ error: 'Lead storage failed', code });
     }
-    return res.status(502).json({ error: 'Lead storage failed' });
   }
   if (!RESEND_API_KEY || !CONTACT_FROM_EMAIL) {
     return res.status(503).json({ error: 'Email delivery is unavailable' });
