@@ -6,7 +6,24 @@
   "functions": {
     "api/contact.js": { "maxDuration": 30 }
   },
+  "headers": [
+    {
+      "source": "/bookapointment/status",
+      "headers": [
+        { "key": "X-Robots-Tag", "value": "noindex, nofollow" },
+        { "key": "Referrer-Policy", "value": "no-referrer" }
+      ]
+    }
+  ],
   "rewrites": [
+    {
+      "source": "/bookapointment",
+      "destination": "/bookapointment/index.html"
+    },
+    {
+      "source": "/bookapointment/status",
+      "destination": "/bookapointment/index.html"
+    },
     {
       "source": "/((?!api/).*)",
       "destination": "/index.html"

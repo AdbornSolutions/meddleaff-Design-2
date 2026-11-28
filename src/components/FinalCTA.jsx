@@ -20,13 +20,13 @@ function FinalCTA() {
             Deserves the Best Care.
           </h2></Reveal><Reveal delay={0.14}><p className="mx-auto mt-7 max-w-xl text-[17px] leading-relaxed text-white/70">
             Take the first step towards better health with Meddleaff Healthcare.
-          </p></Reveal><Reveal delay={0.2}><div className="mt-11 flex flex-wrap items-center justify-center gap-3"><SiteLink
-    to="/contact"
+          </p></Reveal><Reveal delay={0.2}><div className="mt-11 flex flex-wrap items-center justify-center gap-3"><a
+    href="/bookapointment"
     className="button-3d inline-flex items-center rounded-full bg-white px-8 py-4 text-sm font-medium text-brand-navy transition-colors duration-200 ease-premium hover:bg-brand-background"
   >
               
               Book an Appointment
-            </SiteLink><SiteLink
+            </a><SiteLink
     to="/patient-corner/queries"
     className="button-3d button-white query-button-soft group inline-flex items-center gap-2 rounded-full border border-white/25 px-8 py-4 text-sm font-medium text-white transition-colors duration-200 ease-premium hover:border-white/60"
   >

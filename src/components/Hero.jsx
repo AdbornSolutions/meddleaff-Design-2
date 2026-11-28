@@ -50,7 +50,7 @@ function Hero() {
     transition={{ duration: 0.8, ease: EASE, delay: 1 }}
     className="mt-10 flex flex-wrap items-center gap-3"
   ><a
-    href="#contact"
+    href="/bookapointment"
     className="button-3d inline-flex items-center rounded-full bg-brand-blue px-8 py-4 text-sm font-medium text-white transition-colors duration-200 ease-premium hover:bg-brand-blue-dark"
   >
               
